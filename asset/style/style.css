@@ -1,0 +1,139 @@
+/* Reset css de la page */
+
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Partie nav bar */
+
+.header {
+    background-color: rgb(85, 148, 85);
+    padding: 19px 15px;
+}
+  
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+  
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    width: 100%;
+    color: #fff;
+    font-family: 'Roboto';
+    margin: 0 auto;
+}
+    
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+    
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s;
+}
+
+.nav-menu a:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+  
+.burger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: #fff;
+    transition: all 0.5s ease-in;
+}
+  
+.burger.active .line1 {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+    
+.burger.active .line2 {
+    opacity: 0;
+}
+    
+.burger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+    
+@media screen and (max-width: 1024px) {
+    .nav-menu {
+        width: 70%
+    }
+}
+        
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .burger {
+        display: block;
+        padding-right: 20px;
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 50%;
+        background-color:rgb(85, 148, 85);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: calc(100vh - 70px);
+        transition: right 0.5s ease-in;
+    }
+    
+    .nav-menu li {
+        opacity: 0;
+    }
+      
+    .nav-menu.active {
+        right: 0;
+        width: 50%;
+    }
+}
+   
+@keyframes navLinksFade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) translateX(50px);
+    }
+            
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }       
+}
+    
+    
