@@ -92,7 +92,9 @@
 </section>
 
 <section class="aboutus_section">
-<h3 class="about_title">A propos de nous</h3>
+<h3 class="about_title">A propos de Locky</h3>
+<p class="about_text">Chaque programme est conçu de façon à répondre à un besoin spécifique, et de nombreux programmes sont considérés comme leaders de leurs marché et ont été récompensés pour leur qualité. </p>
+<input type="button" value="EN SAVOIR PLUS" class="btn_about">
 </section>
 
 </main>
