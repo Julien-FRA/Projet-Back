@@ -138,15 +138,40 @@ figcaption {
 /* Partie A propos */
 
 .aboutus_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 40vh;
   background-image: url("background-img/aboutus.png");
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.85;
 }
 
 .about_title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
+  color: white;
+}
+
+.about_text {
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  max-width: 1000px;
+  margin-top: 50px;
+}
+
+.btn_about {
+  width: 150px;
+  height: 40px;
+  background-color: #f78c22;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 50px;
 }
 
 /* Partie fiche produit */
@@ -183,7 +208,8 @@ figcaption {
   cursor: pointer;
 }
 
-.btn_achat:hover {
+.btn_achat:hover,
+.btn_about:hover {
   background: #f38414;
   transform: scale(1.1);
 }
@@ -201,7 +227,7 @@ figcaption {
 .footer-nav a {
   text-decoration: none;
   color: black;
-  font-size: 12px;
+  font-size: 1.5rem;
 }
 
 .footer-nav li {
