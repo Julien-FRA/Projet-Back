@@ -149,6 +149,12 @@ figcaption {
   text-align: center;
 }
 
+/* Partie fiche produit */
+
+.info_produit {
+  background-color: #f38414;
+}
+
 /* Partie footer */
 
 .footer-nav {

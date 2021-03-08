@@ -23,7 +23,7 @@
             />
             <p class="price">$499</p>
             <a
-            href=""
+            href="fiche_produit.php"
             class="discover-button button-fx"
             >DECOUVRIR</a
           >
@@ -43,7 +43,7 @@
             />
             <p class="price">$499</p>
             <a
-            href=""
+            href="fiche_produit.php"
             class="discover-button button-fx"
             >DECOUVRIR</a
           >
@@ -63,7 +63,7 @@
             />
             <p class="price">$499</p>
             <a
-            href=""
+            href="fiche_produit.php"
             class="discover-button button-fx"
             >DECOUVRIR</a
           >
@@ -83,7 +83,7 @@
             />
             <p class="price">$499</p>
             <a
-            href=""
+            href="fiche_produit.php"
             class="discover-button button-fx"
             >DECOUVRIR</a
           >
