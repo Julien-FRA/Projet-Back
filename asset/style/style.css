@@ -152,7 +152,40 @@ figcaption {
 /* Partie fiche produit */
 
 .info_produit {
-  background-color: #f38414;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 70px;
+}
+
+.desc_produit {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.desc_produit h4 {
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+
+.desc_produit .desc_text {
+  font-size: 20px;
+  padding: 15px 0 15px 0;
+}
+
+.btn_achat {
+  width: 123px;
+  height: 40px;
+  background-color: #f78c22;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn_achat:hover {
+  background: #f38414;
+  transform: scale(1.1);
 }
 
 /* Partie footer */
