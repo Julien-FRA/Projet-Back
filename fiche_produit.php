@@ -20,7 +20,20 @@
             <input type="button" value="Achetez" class="btn_achat">
         </article>
     </section>
-    section>
+    <section class="more_info">
+        <p class="tittle">Gameover Zeus</p>
+        <p class="text">Gameover Zeus appartient à la famille de programmes malveillants et de virus « Zeus ». Ce programme malveillant est un cheval de Troie, un programme malveillant qui se fait passer pour un programme authentique, qui accède à vos données bancaires sensibles et vous dérobe vos fonds.</p>
+        <p class="text">Le pire avec ce représentant de la famille de programmes malveillants « Zeus », c’est qu’il n’a pas besoin d’un serveur centralisé de « commandement et de contrôle » pour effectuer des opérations bancaires, une faiblesse de nombreuses autres cyberattaques que les autorités peuvent cibler. Gameover Zeus peut contourner les serveurs centralisés et créer des serveurs indépendants pour transmettre des informations sensibles. En substance, vous ne pouvez pas suivre vos données volées.</p>
+    </section>
+    <section class="ad_comments">
+        <p class="tittle">Espace commentaire :</p>
+        <form action="" class="form">
+            <label for="" class="info_comments">Auteur</label>
+            <input type="text" name="" id="" class="author">
+            <label for="" class="info_comments">Commentaire</label>
+            <input type="text" name="" id="" class="comments">
+            <button type="submit" class="btn_achat send">Envoyer</button>
+        </form>
+    </section>
 </main>
-<hr>
 <?php include 'config/template/footer.php'; ?>

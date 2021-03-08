@@ -156,6 +156,7 @@ figcaption {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 70px;
+  border-top: lightgray 2px solid;
 }
 
 .desc_produit {
@@ -169,7 +170,7 @@ figcaption {
 }
 
 .desc_produit .desc_text {
-  font-size: 20px;
+  font-size: 22px;
   padding: 15px 0 15px 0;
 }
 
@@ -186,6 +187,54 @@ figcaption {
 .btn_achat:hover {
   background: #f38414;
   transform: scale(1.1);
+}
+
+.more_info {
+  padding: 40px;
+  border-top: lightgray 2px solid;
+  border-bottom: lightgray 2px solid;
+}
+
+.tittle {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.text {
+  padding-top: 30px;
+  font-size: 22px;
+}
+
+.ad_comments {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border-bottom: lightgray 2px solid;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_comments {
+  font-size: 24px;
+  padding: 20px 0 20px 0;
+}
+
+.author {
+  width: 400px;
+  padding: 10px;
+}
+
+.comments {
+  width: 400px;
+  height: 100px;
+  padding: 10px;
+}
+
+.send {
+  margin-top: 20px;
 }
 
 /* Partie footer */
