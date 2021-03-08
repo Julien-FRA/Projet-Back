@@ -263,6 +263,66 @@ figcaption {
   margin-top: 20px;
 }
 
+/* Partie inscription */
+
+.sign {
+  padding: 30px 0 30px 0;
+  border-top: lightgray 2px solid;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup h1 {
+  font-size: 30px;
+}
+
+.signup input {
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+  padding-left: 10px;
+  border: 1px solid #9e9b98;
+}
+
+.signup input:hover {
+  width: 325px;
+  height: 35px;
+  border: 1px solid #f78c22;
+}
+
+.signup input:focus {
+  outline: none;
+}
+
+.submit-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit {
+  font-size: 12px;
+  height: 42px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+  background: transparent;
+}
+
+.more {
+  text-decoration: none;
+  color: black;
+}
+
+.more:hover {
+  text-decoration: underline;
+}
+
 /* Partie footer */
 
 .footer-nav {
