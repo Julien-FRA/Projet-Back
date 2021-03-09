@@ -323,6 +323,87 @@ figcaption {
   text-decoration: underline;
 }
 
+/* Partie Profil */
+
+.user_pictures {
+  width: 20%;
+}
+
+.user_name {
+  display: flex;
+  align-items: center;
+  max-width: 20%;
+  padding: 0;
+}
+
+.user_figure {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #9e9b98;
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+.btn_profil {
+  width: 500px;
+  height: 30px;
+  border: 1px solid #9e9b98;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.profil_nav {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.profil_title {
+  padding-bottom: 30px;
+}
+
+.profil_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 80px 0 80px 0;
+}
+
+.profil_information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  width: 600px;
+  border: 1px solid #9e9b98;
+}
+
+.form_information {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_contain {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_contain input {
+  width: 500px;
+  height: 30px;
+  margin: 10px 0 10px 0;
+  border: 1px solid #9e9b98;
+}
+
+.btn_profil:hover {
+  transform: scale(1.05);
+  border: 1px solid #1ae5be;
+}
+
+.btn_profil:focus {
+  outline: none;
+}
 /* Partie footer */
 
 .footer-nav {
