@@ -23,7 +23,7 @@
   color: #1d1d1c;
   text-decoration: none;
   font-size: 2rem;
-  border: solid 1px #1AE5BE;
+  border: solid 2px #1d1d1c;
   padding: 5px;
 }
 
@@ -158,13 +158,13 @@ figcaption {
   font-size: 18px;
   text-decoration: none;
   color: #1d1d1c;
-  border: #1AE5BE 2px solid;
+  border: #1d1d1c 2px solid;
   margin-top: 20px;
 }
 
 .button-fx:hover {
   background:  #1d1d1c;
-  color: #1AE5BE;
+  color: #fff;
   border: none;
   transform: scale(1.1);
 }
@@ -197,28 +197,33 @@ figcaption {
 .desc_produit .desc_text {
   font-size: 22px;
   padding: 15px 0 15px 0;
+  color: #1d1d1c;
 }
 
 .btn_achat {
   width: 123px;
-  height: 40px;
-  background-color: #f78c22;
-  border: none;
-  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  background-color: #fff;
   font-size: 18px;
+  text-decoration: none;
+  color: #1d1d1c;
+  border: #1d1d1c 2px solid;
   cursor: pointer;
 }
 
 .btn_achat:hover,
 .btn_about:hover {
-  background: #f38414;
+  background:  #1d1d1c;
+  color: #fff;
+  border: none;
   transform: scale(1.1);
 }
 
 .more_info {
   padding: 40px;
-  border-top: lightgray 2px solid;
-  border-bottom: lightgray 2px solid;
+  color: #fff;
+  background-color: #1d1d1c;
 }
 
 .tittle {
@@ -246,17 +251,26 @@ figcaption {
 .info_comments {
   font-size: 24px;
   padding: 20px 0 20px 0;
+  color: #1d1d1c;
 }
 
 .author {
   width: 400px;
   padding: 10px;
+  border: 1px solid #9e9b98;
 }
 
 .comments {
   width: 400px;
   height: 100px;
   padding: 10px;
+  border: 1px solid #9e9b98;
+}
+
+.comments:hover,
+.author:hover {
+  transform: scale(1.05);
+  border: 1px solid #1ae5be;
 }
 
 .send {
@@ -268,6 +282,10 @@ figcaption {
 .sign {
   padding: 30px 0 30px 0;
   border-top: lightgray 2px solid;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup {
@@ -278,20 +296,20 @@ figcaption {
 
 .signup h1 {
   font-size: 30px;
+  color: #1d1d1c;
 }
 
 .signup input {
   width: 300px;
-  height: 30px;
+  height: 40px;
   margin: 10px;
   padding-left: 10px;
-  border: 1px solid #9e9b98;
+  border: 2px solid #9e9b98;
 }
 
 .signup input:hover {
-  width: 325px;
-  height: 35px;
-  border: 1px solid #f78c22;
+  transform: scale(1.05);
+  border: 1px solid #1ae5be;
 }
 
 .signup input:focus {
@@ -314,6 +332,12 @@ figcaption {
   background: transparent;
 }
 
+.submit:hover {
+  background:  #1d1d1c;
+  color: #fff;
+  transform: scale(1.1);
+}
+
 .more {
   text-decoration: none;
   color: #1d1d1c;
@@ -321,6 +345,7 @@ figcaption {
 
 .more:hover {
   text-decoration: underline;
+  color: #1AE5BE;
 }
 
 /* Partie Profil */
@@ -435,6 +460,8 @@ figcaption {
   font-size: 18px;
   color: #fff;
   margin-bottom: 15px;
+  display: flex;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -484,6 +511,15 @@ figcaption {
   .nav-menu.active {
     right: 0;
     width: 50%;
+  }
+
+  .tittle {
+    font-size: 26px;
+  }
+
+  .author,
+  .comments {
+    width: 250px;
   }
 }
 
