@@ -4,12 +4,12 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Font de la page */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 /* Partie nav bar */
 
@@ -54,7 +54,7 @@
 }
 
 .nav-menu a:hover {
-  border-bottom: 1px solid #1AE5BE;
+  border-bottom: 1px solid #1ae5be;
 }
 
 .burger {
@@ -96,7 +96,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
 }
 
 .section_hero h1 {
@@ -163,7 +162,7 @@ figcaption {
 }
 
 .button-fx:hover {
-  background:  #1d1d1c;
+  background: #1d1d1c;
   color: #fff;
   border: none;
   transform: scale(1.1);
@@ -214,7 +213,7 @@ figcaption {
 
 .btn_achat:hover,
 .btn_about:hover {
-  background:  #1d1d1c;
+  background: #1d1d1c;
   color: #fff;
   border: none;
   transform: scale(1.1);
@@ -332,7 +331,7 @@ figcaption {
 }
 
 .submit:hover {
-  background:  #1d1d1c;
+  background: #1d1d1c;
   color: #fff;
   transform: scale(1.1);
 }
@@ -344,18 +343,20 @@ figcaption {
 
 .more:hover {
   text-decoration: underline;
-  color: #1AE5BE;
+  color: #1ae5be;
 }
 
 /* Partie Profil */
 
 .user_pictures {
-  width: 20%;
+  width: 15%;
+  margin-right: 30px;
 }
 
 .user_name {
   display: flex;
   align-items: center;
+  color: white;
   max-width: 20%;
   padding: 0;
 }
@@ -363,8 +364,10 @@ figcaption {
 .user_figure {
   display: flex;
   justify-content: center;
-  border: 1px solid #9e9b98;
+  background: #1d1d1c;
+  border: 1px solid #1ae5be;
   margin-bottom: 10px;
+  padding: 10px 0 10px 0;
   width: 500px;
 }
 
@@ -390,14 +393,14 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 50px 0 50px 0;
+  padding: 150px 0 150px 0;
 }
 
 .profil_information {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 50px;
+  align-items: center;
   width: 600px;
   border: 1px solid #9e9b98;
 }
@@ -422,6 +425,8 @@ figcaption {
 .btn_profil:hover {
   transform: scale(1.05);
   border: 1px solid #1ae5be;
+  background: #1d1d1c;
+  color: #fff;
 }
 
 .btn_profil:focus {
@@ -522,6 +527,38 @@ figcaption {
   .author,
   .comments {
     width: 250px;
+  }
+
+  .profil_information {
+    width: 400px;
+  }
+
+  .user_figure,
+  .btn_profil {
+    width: 400px;
+  }
+
+  .form_contain input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .profil_information {
+    width: 300px;
+  }
+
+  .user_figure,
+  .btn_profil {
+    width: 300px;
+  }
+
+  .form_contain input {
+    width: 250px;
+  }
+
+  .user_pictures {
+    display: none;
   }
 }
 

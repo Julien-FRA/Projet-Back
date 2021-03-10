@@ -7,11 +7,11 @@
 <article_one class="profil_nav">
 <figure class="user_figure">
             <img
-              src="asset/img/avatar.jpg"
+              src="asset/img/avatar.svg"
               alt="photo de profil de l'utilisateur"
               class="user_pictures"
             />
-            <figcaption class="user_name">Bonjour, Utilisateur1</figcaption>
+            <figcaption class="user_name">Bonjour, Julien</figcaption>
           </figure>
           <input type="button" value="Apercu du compte" class="btn_profil">
           <input type="button" value="Mes commandes" class="btn_profil">
