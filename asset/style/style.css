@@ -4,20 +4,26 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
+
+/* Font de la page */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* Partie nav bar */
 
 .header {
   background-color: rgb(255, 255, 255);
   padding: 19px 15px;
+  border-bottom: #1d1d1c 1px solid;
 }
 
 .logo {
-  color: black;
+  color: #1d1d1c;
   text-decoration: none;
   font-size: 2rem;
-  border: solid 1px black;
+  border: solid 2px #1d1d1c;
   padding: 5px;
 }
 
@@ -39,7 +45,7 @@
 }
 
 .nav-menu a {
-  color: black;
+  color: #1d1d1c;
   text-decoration: none;
   font-size: 1.2rem;
   padding-bottom: 5px;
@@ -48,7 +54,7 @@
 }
 
 .nav-menu a:hover {
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid #1AE5BE;
 }
 
 .burger {
@@ -60,7 +66,7 @@
   width: 30px;
   height: 3px;
   margin: 5px;
-  background: rgb(0, 0, 0);
+  background: #1d1d1c;
   transition: all 0.5s ease-in;
 }
 
@@ -79,15 +85,43 @@
 /* Partie full hero */
 
 .section_hero {
-  height: 70vh;
-  background-image: url("background-img/full_hero.png");
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("background-img/heroimg.png");
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
-.full_hero {
-  width: 100%;
-  max-height: 70vh;
+.section_hero h1 {
+  font-size: 5em;
+  color: #1d1d1c;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.section_hero p {
+  font-size: 2em;
+  color: #1d1d1c;
+}
+
+.btn-hero {
+  display: block;
+  width: 200px;
+  padding: 1em;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1d1d1c;
+  text-decoration: none;
+  font-size: 1.5em;
+  border: 3px solid #1c1d1d;
 }
 
 /* Partie article */
@@ -96,6 +130,7 @@ figcaption {
   font-size: 1.5rem;
   padding-top: 50px;
   text-align: center;
+  color: #1d1d1c;
 }
 
 .section_article {
@@ -119,59 +154,24 @@ figcaption {
   width: 123px;
   line-height: 48px;
   text-align: center;
-  background-color: #f78c22;
+  background-color: #fff;
   font-size: 18px;
   text-decoration: none;
-  color: white;
+  color: #1d1d1c;
+  border: #1d1d1c 2px solid;
   margin-top: 20px;
 }
 
 .button-fx:hover {
-  background: #f38414;
+  background:  #1d1d1c;
+  color: #fff;
+  border: none;
   transform: scale(1.1);
 }
 
 .price {
   font-size: 1.5rem;
-}
-
-/* Partie A propos */
-
-.aboutus_section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 40vh;
-  background-image: url("background-img/aboutus.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.85;
-}
-
-.about_title {
-  font-size: 2.5rem;
-  text-align: center;
-  color: white;
-}
-
-.about_text {
-  font-size: 1.5rem;
-  text-align: center;
-  color: white;
-  max-width: 1000px;
-  margin-top: 50px;
-}
-
-.btn_about {
-  width: 150px;
-  height: 48px;
-  background-color: #f78c22;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-  margin-top: 50px;
+  color: #1d1d1c;
 }
 
 /* Partie fiche produit */
@@ -197,28 +197,33 @@ figcaption {
 .desc_produit .desc_text {
   font-size: 22px;
   padding: 15px 0 15px 0;
+  color: #1d1d1c;
 }
 
 .btn_achat {
   width: 123px;
-  height: 40px;
-  background-color: #f78c22;
-  border: none;
-  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  background-color: #fff;
   font-size: 18px;
+  text-decoration: none;
+  color: #1d1d1c;
+  border: #1d1d1c 2px solid;
   cursor: pointer;
 }
 
 .btn_achat:hover,
 .btn_about:hover {
-  background: #f38414;
+  background:  #1d1d1c;
+  color: #fff;
+  border: none;
   transform: scale(1.1);
 }
 
 .more_info {
   padding: 40px;
-  border-top: lightgray 2px solid;
-  border-bottom: lightgray 2px solid;
+  color: #fff;
+  background-color: #1d1d1c;
 }
 
 .tittle {
@@ -246,17 +251,26 @@ figcaption {
 .info_comments {
   font-size: 24px;
   padding: 20px 0 20px 0;
+  color: #1d1d1c;
 }
 
 .author {
   width: 400px;
   padding: 10px;
+  border: 1px solid #9e9b98;
 }
 
 .comments {
   width: 400px;
   height: 100px;
   padding: 10px;
+  border: 1px solid #9e9b98;
+}
+
+.comments:hover,
+.author:hover {
+  transform: scale(1.05);
+  border: 1px solid #1ae5be;
 }
 
 .send {
@@ -267,7 +281,10 @@ figcaption {
 
 .sign {
   padding: 30px 0 30px 0;
-  border-top: lightgray 2px solid;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup {
@@ -278,20 +295,20 @@ figcaption {
 
 .signup h1 {
   font-size: 30px;
+  color: #1d1d1c;
 }
 
 .signup input {
   width: 300px;
-  height: 30px;
+  height: 40px;
   margin: 10px;
   padding-left: 10px;
-  border: 1px solid #9e9b98;
+  border: 2px solid #9e9b98;
 }
 
 .signup input:hover {
-  width: 325px;
-  height: 35px;
-  border: 1px solid #f78c22;
+  transform: scale(1.05);
+  border: 1px solid #1ae5be;
 }
 
 .signup input:focus {
@@ -310,17 +327,24 @@ figcaption {
   cursor: pointer;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: black;
+  color: #1d1d1c;
   background: transparent;
+}
+
+.submit:hover {
+  background:  #1d1d1c;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .more {
   text-decoration: none;
-  color: black;
+  color: #1d1d1c;
 }
 
 .more:hover {
   text-decoration: underline;
+  color: #1AE5BE;
 }
 
 /* Partie Profil */
@@ -421,6 +445,7 @@ figcaption {
 
 .footer_card img {
   width: 100px;
+  margin-bottom: 20px;
 }
 
 .footer_card h4 {
@@ -433,6 +458,8 @@ figcaption {
   font-size: 18px;
   color: #fff;
   margin-bottom: 15px;
+  display: flex;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -486,6 +513,15 @@ figcaption {
   .nav-menu.active {
     right: 0;
     width: 50%;
+  }
+
+  .tittle {
+    font-size: 26px;
+  }
+
+  .author,
+  .comments {
+    width: 250px;
   }
 }
 

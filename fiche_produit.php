@@ -28,10 +28,10 @@
     <section class="ad_comments">
         <p class="tittle">Espace commentaire :</p>
         <form action="" class="form">
-            <label for="" class="info_comments">Auteur</label>
-            <input type="text" name="" id="" class="author">
-            <label for="" class="info_comments">Commentaire</label>
-            <input type="text" name="" id="" class="comments">
+            <label for="" class="info_comments">Auteur :</label>
+            <input type="text" name="" id="" class="author" placeholder="Votre pseudo">
+            <label for="" class="info_comments">Commentaire :</label>
+            <input type="text" name="" id="" class="comments" placeholder="Votre commentaire">
             <button type="submit" class="btn_achat send">Envoyer</button>
         </form>
     </section>

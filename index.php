@@ -6,6 +6,11 @@
 <!-- <h2 class="">Page Accueil</h2> -->
 
 <section class="section_hero">
+  <div class="hero-inner">
+    <h1>Locky</h1>
+    <p>Les virus les plus performants</p>
+    <a href="#" class="btn-hero">Voir plus...</a>
+  </div>
 </section>
 
 <section class="section_article">
@@ -91,10 +96,12 @@
           </figure>
 </section>
 
-<section class="aboutus_section">
-<h3 class="about_title">A propos de Locky</h3>
-<p class="about_text">Chaque programme est conçu de façon à répondre à un besoin spécifique, et de nombreux programmes sont considérés comme leaders de leurs marché et ont été récompensés pour leur qualité. </p>
-<input type="button" value="EN SAVOIR PLUS" class="btn_about">
+<section class="section_hero">
+  <div class="hero-inner">
+    <h1>A propos de nous</h1>
+    <p>Nous sommes une entreprise à la pointe de la technologie</p>
+    <a href="#" class="btn-hero">Voir plus...</a>
+  </div>
 </section>
 
 </main>
