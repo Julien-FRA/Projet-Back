@@ -541,13 +541,20 @@ figcaption {
     width: 250px;
   }
 
-  .profil_information {
+  .profil_information,
+  .my_mdp,
+  .my_pictures,
+  .my_order {
     width: 400px;
   }
 
   .user_figure,
   .btn_profil {
     width: 400px;
+  }
+
+  .my_mdp input {
+    margin-bottom: 15px;
   }
 
   .form_contain input {
