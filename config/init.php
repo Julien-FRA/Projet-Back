@@ -18,10 +18,6 @@ try { // on essai ce code
 
 $content = "";
 
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-
 if(isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
 
     $erreur = false;
@@ -62,7 +58,7 @@ if(isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
         $erreur = true;
       }
 
-    if (isset($_POST['password']) && ($_POST['password'] !=='')) {
+    if (isset($_POST['password']) && ($_POST['password'] !=='') && ($_POST['password']) === ($_POST['verifypassword'])) {
         if(preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[%!?*]).{10,20}$/', $_POST['password'])) {
             $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
         } else {
@@ -70,7 +66,7 @@ if(isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
             $erreur = true;
         }
       } else {
-        $content .= '<div>Le mot de passe doit être remplit ! </div>';
+        $content .= '<div>Le mot de passe doit être remplit et doit être le même que le mot de passe vérifié! </div>';
         $erreur = true;
       }
 
