@@ -4,12 +4,14 @@
 </header>
 <main>
 <section class="sign">
-        <form action="" class="signup">
+        <form action="" class="signup" method="post">
             <h1>Connectez-vous</h1>
-            <input type="name" name="name" id="name" class="inpt" required="required" placeholder="Your name">      
-            <input type="password" name="password" id="password" class="inpt" required="required" placeholder="Your password">
+            <?= $content; ?>
+            <?php checkFlashMessage(); ?>
+            <input type="email" name="mailconnect" id="name" class="inpt" placeholder="Your mail">      
+            <input type="password" name="mdpconnect" id="password" class="inpt" placeholder="Your password">
             <div class="submit-wrap">
-                <input type="submit" value="Se connecter" class="submit">
+                <input type="submit" value="Se connecter" name="formconnexion" class="submit">
             </div>
         </form>
 </section>

@@ -1,6 +1,7 @@
 <?php include 'config/template/head.php'; ?>
 <header>
     <?php include 'config/template/nav.php'; ?>
+    <?php include 'config/login_check.php'; ?>
 </header>
 <main>
 <section class="profil_section">
@@ -11,7 +12,7 @@
               alt="photo de profil de l'utilisateur"
               class="user_pictures"
             />
-            <figcaption class="user_name">Bonjour, Julien</figcaption>
+            <figcaption class="user_name">Bonjour, <?= $_SESSION['pseudo'] ?></figcaption>
           </figure>
           <input type="button" value="Apercu du compte" class="btn_profil" id="infos">
           <input type="button" value="Mes commandes" class="btn_profil" id="cmd">
@@ -24,16 +25,24 @@
     <div class="information_container">
     <form action="" method="get" class="form_information">
   <div class="form_contain">
-    <label for="name">PRENOM: </label>
-    <input type="text" name="firstname" id="firstname">
+    <label for="name">PSEUDO: </label>
+    <input type="text" name="firstname" id="firstname" value="<?= $_SESSION['pseudo'] ?>" disabled>
   </div>
   <div class="form_contain">
-    <label for="name">NOM: </label>
-    <input type="text" name="name" id="name">
+    <label for="name">TELEPHONE: </label>
+    <input type="number" name="name" id="name" value="<?= $_SESSION['phone'] ?>" disabled>
   </div>
   <div class="form_contain">
     <label for="email">ADRESSE E-MAIL: </label>
-    <input type="email" name="email" id="email">
+    <input type="email" name="email" id="email" value="<?= $_SESSION['mail'] ?>" disabled>
+  </div>
+  <div class="form_contain">
+    <label for="genre">GENRE: </label>
+    <input type="text" name="genre" id="genre" value="<?= $_SESSION['genre'] ?>" disabled>
+  </div>
+  <div class="form_contain">
+    <label for="cp">CODE POSTAL: </label>
+    <input type="number" name="cp" id="cp" value="<?= $_SESSION['cp'] ?>" disabled>
   </div>
 </form>
 </div>

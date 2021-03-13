@@ -16,3 +16,12 @@ function addClient($pdo, $name, $email, $cd, $tel, $password, $genre) {
             ]
         );
 };
+
+
+function checkFlashMessage() {
+
+    if(isset($_SESSION['flash_message']) && !empty($_SESSION['flash_message'])) {
+        echo $_SESSION['flash_message'];
+        $_SESSION['flash_message'] = "";
+        }
+};
