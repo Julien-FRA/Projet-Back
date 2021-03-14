@@ -19,6 +19,8 @@ try { // on essai ce code
 
 $content = "";
 
+// Page inscription
+
 if(isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
 
     $erreur = false;
@@ -31,7 +33,29 @@ if(isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
       }
 
     if (isset($_POST['email']) && ($_POST['email'] !==''))  {
-        $email = htmlspecialchars($_POST['email']);
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+
+          $email = htmlspecialchars($_POST['email']);
+
+          checkEmail($email, $pdo, $content);
+
+          $emails = explode("@", $email);
+
+          $banned_domaine = [
+            "yopmail.com",
+            "yopmail.fr"
+          ];
+
+          if(!in_array($emails[1], $banned_domaine)) {
+            $email = htmlspecialchars($_POST['email']);
+          } else {
+            $content .= '<div>Votre adress email est une adresse poubelle</div>';
+            $erreur = true;
+          } 
+        } else {
+          $content .= '<div>Votre adress email est invalide</div>';
+          $erreur = true;
+        }   
       } else {
         $content .= '<div>Le mail doit être remplit ! </div>';
         $erreur = true;

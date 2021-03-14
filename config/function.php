@@ -25,3 +25,12 @@ function checkFlashMessage() {
         $_SESSION['flash_message'] = "";
         }
 };
+
+function checkEmail($email, $pdo, $content) {
+
+    $verify = $pdo->prepare("SELECT * FROM clients WHERE email_client = ?");
+
+    if($verify->rowCount() == 1) {
+        $content .= '<div>Votre email est déja enregistré</div>';
+    }
+};
