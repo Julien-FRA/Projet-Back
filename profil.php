@@ -50,7 +50,7 @@
 
 <article class="my_mdp" id=divmdp>
 <h2 class="profil_title">Changer de mot de passe</h2>
-<div class="form_contain">
+  <div class="form_contain">
     <label for="name">Ancien mot de passe: </label>
     <input type="text" name="firstname" id="firstname">
   </div>
@@ -59,8 +59,8 @@
     <input type="text" name="name" id="name">
   </div>
   <div class="submit-wrap">
-                <input type="submit" value="Envoyer" class="submit">
-            </div>
+    <input type="submit" value="Envoyer" class="submit">
+  </div>
 </article>
 
 <article class="my_pictures" id=divphotos>
