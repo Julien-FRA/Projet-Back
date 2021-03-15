@@ -26,11 +26,16 @@ function checkFlashMessage() {
         }
 };
 
-function checkEmail($email, $pdo, $content) {
+function checkEmail($email, $pdo) : bool {
 
-    $verify = $pdo->prepare("SELECT * FROM clients WHERE email_client = ?");
+    $result = $pdo->prepare("SELECT * FROM clients WHERE email_client = ?");
 
-    if($verify->rowCount() == 1) {
-        $content .= '<div>Votre email est déja enregistré</div>';
+    $result->execute([$email]);
+
+    $user = $result->fetch();
+
+    if($user) {
+        return true;
     }
+    return false;
 };

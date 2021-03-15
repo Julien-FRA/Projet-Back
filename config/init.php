@@ -13,6 +13,7 @@ $dsn = 'mysql:host=' . HOSTNAME . ';dbname=' . DATABASE;
 
 try { // on essai ce code
     $pdo = new PDO($dsn,USERNAME,PASSWORD);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) { // en cas d'erreur on la capture
     die('<ul><li>Erreur sur le fichier : '. $e->getFile() . '</li><li>Erreur à la ligne ' . $e->getLine() . '</li><li>Message derreur : ' . $e->getMessage() . '</li></ul>');
 }
@@ -37,8 +38,6 @@ if(isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
 
           $email = htmlspecialchars($_POST['email']);
 
-          checkEmail($email, $pdo, $content);
-
           $emails = explode("@", $email);
 
           $banned_domaine = [
@@ -58,6 +57,11 @@ if(isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
         }   
       } else {
         $content .= '<div>Le mail doit être remplit ! </div>';
+        $erreur = true;
+      }
+
+    if(checkEmail($email, $pdo)) {
+        $content .= '<div>Votre email est déja enregistré</div>';
         $erreur = true;
       }
       
@@ -128,7 +132,7 @@ if(isset($_POST['formconnexion']) && $_POST['formconnexion'] == 'Se connecter') 
     {
       $userinfo = $requser->fetch();
       if(password_verify($mdpconnect, $userinfo['password_client'])){
-$_SESSION['id'] = $userinfo['id_client'];
+      $_SESSION['id'] = $userinfo['id_client'];
       $_SESSION['pseudo'] = $userinfo['nom_client'];
       $_SESSION['mail'] = $userinfo['email_client'];
       $_SESSION['genre'] = $userinfo['genre_client'];
