@@ -139,16 +139,15 @@ if(isset($_POST['formconnexion']) && $_POST['formconnexion'] == 'Se connecter') 
       $_SESSION['cp'] = $userinfo['postal_code'];
       $_SESSION['phone'] = $userinfo['phone_number'];
       $_SESSION['loggedin'] = true;
-      header("location: profil.php");
+      $_SESSION['role'] = $userinfo['role_client'];
+      redirectRole();
       }else{
         $content = '<div class="erreur">Mauvais mot de passe ou mail !</div>';
       }
-      
     }else{
       $content = '<div class="erreur">Cette utilisateur n\'existe pas !</div>';
     }
   }else {
-
     $content = '<div class="erreur">Tous les champs doivent être complétés !</div>';
   }
 }
