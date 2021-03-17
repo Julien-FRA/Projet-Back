@@ -42,14 +42,10 @@ function checkEmail($email, $pdo) : bool {
 };
 
 function redirectRole() {
-
-    if(isset($_SESSION['role']) && !empty($_SESSION['role'])) {
         
-        if($_SESSION['role'] == 1) {
-         header("location: admin.php");
-        } else {
-         header("location: profil.php");
-        }
-        header("location: index.php");
+    if($_SESSION['role'] == 1) {
+     header("location: admin.php");
+    } else {
+     header("location: profil.php");
     }
-}
+};

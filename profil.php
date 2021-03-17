@@ -24,6 +24,10 @@
 
     <div class="information_container">
     <form action="" method="get" class="form_information">
+    <div class="form_contain">
+    <label for="name">STATUT: </label>
+    <input type="text" name="firstname" id="firstname" value="<?= $_SESSION['role'] ?>" disabled>
+  </div>
   <div class="form_contain">
     <label for="name">PSEUDO: </label>
     <input type="text" name="firstname" id="firstname" value="<?= $_SESSION['pseudo'] ?>" disabled>
