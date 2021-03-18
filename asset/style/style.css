@@ -183,6 +183,14 @@ figcaption {
   border-top: lightgray 2px solid;
 }
 
+.small_photo_produit {
+  text-align: center;
+}
+
+.small_photo_produit img {
+  width: 75px;
+}
+
 .desc_produit {
   max-width: 600px;
   margin-top: 20px;

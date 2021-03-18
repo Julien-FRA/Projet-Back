@@ -6,6 +6,10 @@
     <section class="info_produit">
         <div class="photo_produit">
             <img src="asset/img/virus.png" alt="photo article virus" class=""/>
+            <div class="small_photo_produit">
+              <img src="asset/img/virus.png" alt="photo article virus" class=""/>
+              <img src="asset/img/virus.png" alt="photo article virus" class=""/>
+            </div>
         </div>
         <article class="desc_produit">
             <h4>Gameover Zeus</h4>
