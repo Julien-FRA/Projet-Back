@@ -2,7 +2,7 @@
 <?php include 'config/template/nav.php'; ?>
 
 <main>
-<section class="sign">
+<section class="sign in">
         <form class="signup" method="post">
             <h1>Connectez-vous</h1>
             <?= $content; ?>

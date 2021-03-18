@@ -288,10 +288,14 @@ figcaption {
 
 .sign {
   padding: 30px 0 30px 0;
-  height: 60vh;
+  margin: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.in {
+  margin: 150px;
 }
 
 .signup {
