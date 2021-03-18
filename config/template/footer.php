@@ -20,8 +20,9 @@
         <p>Contacter nos experts afin d'avoir plus d'informations</p>
         <img src="asset/img_footer/chat.svg" alt="paiement sécurisé">
       </div>
+</nav>
 </footer>
-</div>
+
 
 <script src="asset/script/script.js"></script>
 </body>

@@ -1,11 +1,11 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-    <?php include 'config/template/nav.php'; ?>
-    <?php include 'config/admin_check.php'; ?>
-</header>
+
+<?php include 'config/template/nav.php'; ?>
+<?php include 'config/admin_check.php'; ?>
+
 <main>
 <section class="dashboard">
-
+<h1>Dashboard administrateur</h1>
   <div class="left-dashboard">
     <ul class="vetical-ul">
         <li class="vertical-li"><a href="#home">Produits</a></li>
@@ -20,16 +20,16 @@
   <h2 class="add-produit">Ajoutez un produit :</h2>
   <form method="post">
     <div class="form-img-produit">
-      <label for="">Image du produit :</label>
-      <input type="file" class="input-file" id="" name="" value="">
+      <label >Image du produit :</label>
+      <input type="file" class="input-file">
     </div>
-    <label for="">Titre du produit :</label>
-    <input class="input-titre" type="text" id="" name="" value="">
-    <label for="">Description du produit :</label>
-    <input class="input-desc" type="text" id="" name="" value="">
+    <label>Titre du produit :</label>
+    <input class="input-titre" type="text">
+    <label>Description du produit :</label>
+    <input class="input-desc" type="text">
     <div class="form-prix-produit">
-      <label for="">Prix du produit :</label>
-      <input class="input-prix" type="number" id="" name="" min="0" max="1000" value="">
+      <label>Prix du produit :</label>
+      <input class="input-prix" type="number" min="0" max="1000" value="">
     </div>
     <button class="submit-produit" type="submit" name="submit">Ajouter le produit</button>
   </form>

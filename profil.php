@@ -1,11 +1,12 @@
 <?php include 'config/template/head.php'; ?>
-<header>
     <?php include 'config/template/nav.php'; ?>
     <?php include 'config/login_check.php'; ?>
-</header>
+
 <main>
 <section class="profil_section">
+<h2>Page du profil</h2>
 <article class="profil_nav">
+<h3>Navigation</h3>
 <figure class="user_figure">
             <img
               src="asset/img/avatar.svg"
@@ -23,22 +24,22 @@
     <h2 class="profil_title">Mes informations</h2>
 
     <div class="information_container">
-    <form action="" method="get" class="form_information">
+    <form method="get" class="form_information">
     <div class="form_contain">
-    <label for="name">STATUT: </label>
-    <input type="text" name="firstname" id="firstname" value="<?= $_SESSION['role'] ?>" disabled>
+    <label>STATUT: </label>
+    <input type="text" name="firstname" value="<?= $_SESSION['role'] ?>" disabled>
   </div>
   <div class="form_contain">
-    <label for="name">PSEUDO: </label>
-    <input type="text" name="firstname" id="firstname" value="<?= $_SESSION['pseudo'] ?>" disabled>
+    <label>PSEUDO: </label>
+    <input type="text" name="firstname" value="<?= $_SESSION['pseudo'] ?>" disabled>
   </div>
   <div class="form_contain">
-    <label for="name">TELEPHONE: </label>
-    <input type="number" name="name" id="name" value="<?= $_SESSION['phone'] ?>" disabled>
+    <label>TELEPHONE: </label>
+    <input type="number" name="name" value="<?= $_SESSION['phone'] ?>" disabled>
   </div>
   <div class="form_contain">
-    <label for="email">ADRESSE E-MAIL: </label>
-    <input type="email" name="email" id="email" value="<?= $_SESSION['mail'] ?>" disabled>
+    <label>ADRESSE E-MAIL: </label>
+    <input type="email" name="email" value="<?= $_SESSION['mail'] ?>" disabled>
   </div>
   <div class="form_contain">
     <label for="genre">GENRE: </label>
@@ -55,12 +56,12 @@
 <article class="my_mdp" id=divmdp>
 <h2 class="profil_title">Changer de mot de passe</h2>
   <div class="form_contain">
-    <label for="name">Ancien mot de passe: </label>
-    <input type="text" name="firstname" id="firstname">
+    <label for ="oldMdp">Ancien mot de passe: </label>
+    <input type="text" name="firstname" id="oldMdp">
   </div>
   <div class="form_contain">
-    <label for="name">Nouveau mot de passe: </label>
-    <input type="text" name="name" id="name">
+    <label for="newMdp">Nouveau mot de passe: </label>
+    <input type="text" name="newMdp" id="newMdp">
   </div>
   <div class="submit-wrap">
     <input type="submit" value="Envoyer" class="submit">

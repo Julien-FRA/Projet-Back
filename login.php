@@ -1,10 +1,9 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-    <?php include 'config/template/nav.php'; ?>
-</header>
+<?php include 'config/template/nav.php'; ?>
+
 <main>
 <section class="sign">
-        <form action="" class="signup" method="post">
+        <form class="signup" method="post">
             <h1>Connectez-vous</h1>
             <?= $content; ?>
             <?php checkFlashMessage(); ?>
