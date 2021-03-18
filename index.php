@@ -1,7 +1,7 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-    <?php include 'config/template/nav.php'; ?>
-</header>
+
+<?php include 'config/template/nav.php'; ?>
+
 <main>
 <!-- <h2 class="">Page Accueil</h2> -->
 
@@ -15,7 +15,7 @@
 
 <section class="section_article">
 <figure>
-<figcaption>Virus</figcaption>
+<figcaption><h3>Virus</h3></figcaption>
 <div class="product">
             <img
               src="asset/img/virus.png"
@@ -35,7 +35,7 @@
 </div>
           </figure>
           <figure>
-          <figcaption>Vers</figcaption>
+          <figcaption><h3>Vers</h3></figcaption>
           <div class="product">
             <img
               src="asset/img/vers.png"
@@ -55,7 +55,7 @@
           </div>
           </figure>
           <figure>
-          <figcaption>Spyware</figcaption>
+          <figcaption><h3>Spyware</h3></figcaption>
           <div class="product">
             <img
               src="asset/img/spyware.png"
@@ -75,7 +75,7 @@
           </div>
           </figure>
           <figure>
-          <figcaption>Ransomeware</figcaption>
+          <figcaption><h3>Ransomeware</h3></figcaption>
           <div class="product">
             <img
               src="asset/img/ransomware.png"

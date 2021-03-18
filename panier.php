@@ -1,9 +1,10 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-    <?php include 'config/template/nav.php'; ?>
-</header>
+
+<?php include 'config/template/nav.php'; ?>
+
 <main>
 <section class="page-panier">
+<h2>Mon Panier</h2>
     <table class="table-prdt">
         <thead class="thead-prdt">
             <tr class="tr-prdt">

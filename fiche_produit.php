@@ -1,7 +1,6 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-    <?php include 'config/template/nav.php'; ?>
-</header>
+<?php include 'config/template/nav.php'; ?>
+
 <main>
     <section class="info_produit">
         <div class="photo_produit">

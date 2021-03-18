@@ -1,18 +1,18 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-    <?php include 'config/template/nav.php'; ?>
-</header>
+
+<?php include 'config/template/nav.php'; ?>
+
 <main>
 <section class="sign">
-        <form action="" class="signup" method="post">
+        <form class="signup" method="post">
             <h1>Inscrivez-vous</h1>
             <?= $content; ?>
-            <input type="name" name="name" id="name" class="inpt" placeholder="Your name">      
-            <input type="email" name="email" id="email" class="inpt" placeholder="Your email">
-            <input type="number" name="cd" id="cd" class="inpt" placeholder="Your postal code">
-            <input type="number" name="tel" id="tel" class="inpt" placeholder="Your phone number">   
-            <input type="password" name="password" id="password" class="inpt" placeholder="Your password">
-            <input type="password" name="verifypassword" id="password" class="inpt" placeholder="Verify password">
+            <input type="text" name="name" class="inpt" placeholder="Your name">      
+            <input type="email" name="email" class="inpt" placeholder="Your email">
+            <input type="number" name="cd" class="inpt" placeholder="Your postal code">
+            <input type="number" name="tel" class="inpt" placeholder="Your phone number">   
+            <input type="password" name="password" class="inpt" placeholder="Your password">
+            <input type="password" name="verifypassword" class="inpt" placeholder="Verify password">
             <div class="sign-genre">
                 <label for="homme">Homme</label>
                 <input type="radio" name="genre" id="homme" class="inpt" value="homme">

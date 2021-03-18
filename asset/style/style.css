@@ -507,7 +507,6 @@ figcaption {
   padding: 10px;
 }
 
-
 /* Partie footer */
 
 .footer-nav {
@@ -547,6 +546,13 @@ figcaption {
 
 .dashboard {
   display: flex;
+}
+
+.dashboard h1,
+.page-panier h2,
+.profil_nav h3,
+.profil_section h2 {
+  display: none;
 }
 
 .vetical-ul {
@@ -679,7 +685,6 @@ figcaption {
   color: green;
 }
 
-
 @media screen and (max-width: 1024px) {
   .nav-menu {
     width: 70%;
@@ -778,7 +783,7 @@ figcaption {
     font-size: 12px;
   }
 
-  .dashboard  {
+  .dashboard {
     flex-wrap: wrap;
   }
 
