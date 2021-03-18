@@ -534,6 +534,127 @@ figcaption {
   text-align: center;
 }
 
+/* Partie dashboard */
+
+.dashboard {
+  display: flex;
+}
+
+.vetical-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow: auto;
+}
+
+.vertical-li a {
+  display: block;
+  color: #1d1d1c;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.vertical-li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.add-produit {
+  padding-bottom: 10px;
+}
+
+.form-produit {
+  margin: 20px 0 0 20px;
+  color: #1c1d1d;
+}
+
+.form-produit form {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.form-produit form label {
+  padding: 10px 0 10px 0;
+}
+
+.form-prix-produit {
+  padding: 10px 0 10px 0;
+}
+
+.form-prix-produit input {
+  height: 2rem;
+  margin: 10px;
+}
+
+.input-titre {
+  height: 2rem;
+  max-width: 300px;
+  border: 1px solid #9e9b98;
+}
+
+.input-titre:hover,
+.input-desc:hover,
+.input-prix:hover {
+  border: 1px solid #1ae5be;
+}
+
+.input-desc {
+  height: 6rem;
+  max-width: 300px;
+  border: 1px solid #9e9b98;
+}
+
+.submit-produit {
+  width: 120px;
+  height: 30px;
+  border: 1px solid #9e9b98;
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.submit-produit:hover {
+  transform: scale(1.05);
+  border: 1px solid #1ae5be;
+}
+
+.tableau-produit {
+  margin: 40px 20px 40px 20px;
+  color: #1c1d1d;
+}
+
+.tableau-produit table {
+  border: solid 1px #1c1d1d;
+  margin-top: 20px;
+}
+
+.tableau-produit td {
+  text-align: center;
+  border: solid 1px lightgray;
+  min-width: 50px;
+  padding: 5px;
+}
+
+.tableau-produit th {
+  border: solid 1px lightgray;
+  padding: 5px;
+}
+
+.btn-edit {
+  text-decoration: none;
+  color: blue;
+}
+
+.btn-delete {
+  text-decoration: none;
+  color: red;
+}
+
+
 @media screen and (max-width: 1024px) {
   .nav-menu {
     width: 70%;
