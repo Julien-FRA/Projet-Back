@@ -3,7 +3,11 @@ session_start();
 
 require 'function.php';
 
-require 'config.php';
+// Connexion à la bdd
+define('HOSTNAME', 'localhost');
+define('USERNAME', 'root');
+define('PASSWORD', '');
+define('DATABASE', 'locky');
 
 $dsn = 'mysql:host=' . HOSTNAME . ';dbname=' . DATABASE;
 
