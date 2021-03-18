@@ -12,9 +12,8 @@ let navSlide = () => {
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-        link.style.animation = `navLinksFade 0.5s ease forwards ${
-          index / 5 + 0.5
-        }s`;
+        link.style.animation = `navLinksFade 0.5s ease forwards ${index / 5 + 0.5
+          }s`;
       }
     });
 
@@ -78,22 +77,4 @@ btnMdp.addEventListener("click", () => {
     divMdp.style.display = "none";
   }
 });
-// const btnInfo = document.getElementById("infos");
-// const btnCmd = document.getElementById("cmd");
-// const btnMdp = document.getElementById("mdp");
-// const btnPhoto = document.getElementById("photos");
 
-// btnInfo.addEventListener("click", AfficherMasquer);
-// btnCmd.addEventListener("click", AfficherMasquer);
-// btnMdp.addEventListener("click", AfficherMasquer);
-// btnPhoto.addEventListener("click", AfficherMasquer);
-
-// divInfo = document.getElementById("divinfo");
-// divPhoto = document.getElementById("divphoto");
-// divMdp = document.getElementById("divmdp");
-// divCmd = document.getElementById("divcmd");
-
-// function AfficherMasquer() {
-//     if (divPhoto.style.display == "none") divPhoto.style.display = "block";
-//     else divPhoto.style.display = "none";
-// }
