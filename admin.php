@@ -17,7 +17,7 @@
 <div class="produit-dashboard">
 
 <article class="form-produit">
-  <h2 class="add-produit">Ajoutez un produit</h2>
+  <h2 class="add-produit">Ajoutez un produit :</h2>
   <form method="post">
     <div class="form-img-produit">
       <label for="">Image du produit :</label>
@@ -36,14 +36,14 @@
 </article>
 
 <article class="tableau-produit">
-  <h2 class="add-produit">Voici un tableau de récap des produits</h2>
+  <h2 class="add-produit">Voici un tableau de récap des produits :</h2>
   <table>
 
     <thead>
       <tr>
         <th>Id</th>
-        <th>Image</th>
-        <th>Description</th>
+        <th class="table-img">Image</th>
+        <th>Titre</th>
         <th>Prix</th>
         <th>Action</th>
       </tr>
@@ -52,12 +52,15 @@
    <tbody>
        <tr>
            <td>1</td>
-           <td>Ceci est une description longue.Ceci est une description longue.Ceci est une description longue</td>
+           <td class="table-img"><img src="asset/img/ransomware.png" alt=""></td>
            <td>Hack</td>
            <td>Hack</td>
             <td>
-              <a href="" class="btn-edit">Editer</a>
-              <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+              <div class="btn-table">
+                <a href="" class="btn-see">Voir</a>
+                <a href="" class="btn-edit">Editer</a>
+                <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+              </div>
             </td>
        </tr>
    </tbody>

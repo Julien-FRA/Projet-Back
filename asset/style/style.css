@@ -454,6 +454,7 @@ figcaption {
 
 .page-panier {
   color: #1c1d1d;
+  min-height: 65vh;
 }
 
 .table-prdt {
@@ -544,7 +545,7 @@ figcaption {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 100%;
   background-color: #f1f1f1;
   height: 100%;
   overflow: auto;
@@ -563,7 +564,7 @@ figcaption {
 }
 
 .add-produit {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .form-produit {
@@ -592,7 +593,7 @@ figcaption {
 
 .input-titre {
   height: 2rem;
-  max-width: 300px;
+  max-width: 30vw;
   border: 1px solid #9e9b98;
 }
 
@@ -604,7 +605,7 @@ figcaption {
 
 .input-desc {
   height: 6rem;
-  max-width: 300px;
+  max-width: 30vw;
   border: 1px solid #9e9b98;
 }
 
@@ -628,8 +629,9 @@ figcaption {
 }
 
 .tableau-produit table {
-  border: solid 1px #1c1d1d;
   margin-top: 20px;
+  border-collapse: collapse;
+  min-width: 60vw;
 }
 
 .tableau-produit td {
@@ -639,9 +641,19 @@ figcaption {
   padding: 5px;
 }
 
+.tableau-produit td img {
+  max-width: 150px;
+  max-height: 100px;
+}
+
 .tableau-produit th {
   border: solid 1px lightgray;
   padding: 5px;
+}
+
+.btn-table {
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-edit {
@@ -652,6 +664,11 @@ figcaption {
 .btn-delete {
   text-decoration: none;
   color: red;
+}
+
+.btn-see {
+  text-decoration: none;
+  color: green;
 }
 
 
@@ -751,6 +768,23 @@ figcaption {
   .td-prdt,
   .td-info {
     font-size: 12px;
+  }
+
+  .dashboard  {
+    flex-wrap: wrap;
+  }
+
+  .vetical-ul {
+    width: 100%;
+  }
+
+  .left-dashboard {
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .table-img {
+    display: none;
   }
 }
 
