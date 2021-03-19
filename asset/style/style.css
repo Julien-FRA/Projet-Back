@@ -581,7 +581,9 @@ figcaption {
   color: white;
 }
 
-.add-produit {
+.add-produit,
+.add-client,
+.add-commentaire {
   padding-bottom: 20px;
 }
 
@@ -612,6 +614,7 @@ figcaption {
 .input-titre {
   height: 2rem;
   max-width: 30vw;
+  min-width: 225px;
   border: 1px solid #9e9b98;
 }
 
@@ -624,6 +627,7 @@ figcaption {
 .input-desc {
   height: 6rem;
   max-width: 30vw;
+  min-width: 225px;
   border: 1px solid #9e9b98;
 }
 
@@ -641,18 +645,24 @@ figcaption {
   border: 1px solid #1ae5be;
 }
 
-.tableau-produit {
+.tableau-produit,
+.client-dashboard,
+.commentaire-dashboard {
   margin: 40px 20px 40px 20px;
   color: #1c1d1d;
 }
 
-.tableau-produit table {
+.tableau-produit table,
+.client-dashboard table,
+.commentaire-dashboard table {
   margin-top: 20px;
   border-collapse: collapse;
   min-width: 60vw;
 }
 
-.tableau-produit td {
+.tableau-produit td,
+.client-dashboard td,
+.commentaire-dashboard td {
   text-align: center;
   border: solid 1px lightgray;
   min-width: 50px;
@@ -664,7 +674,9 @@ figcaption {
   max-height: 100px;
 }
 
-.tableau-produit th {
+.tableau-produit th,
+.client-dashboard th,
+.commentaire-dashboard th {
   border: solid 1px lightgray;
   padding: 5px;
 }

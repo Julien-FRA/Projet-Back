@@ -65,8 +65,74 @@
        </tr>
    </tbody>
 
-</table>
+  </table>
+
 </article>
+  
+<article class="client-dashboard">
+  <h2 class="add-client">Voici un tableau de récap des clients :</h2>
+  <table>
+
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Role</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td>1</td>
+        <td>Julien</td>
+        <td>Admin</td>
+          <td>
+            <div class="btn-table">
+              <a href="" class="btn-see">Voir</a>
+              <a href="" class="btn-edit">Editer</a>
+              <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+            </div>
+          </td>
+    </tr>
+  </tbody>
+
+  </table>
+
+</article>
+
+<article class="commentaire-dashboard">
+  <h2 class="add-commentaire">Voici un tableau de récap des commentaires :</h2>
+  <table>
+
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Autheur</th>
+      <th>Commentaire</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td>1</td>
+        <td>Julien</td>
+        <td>Voici un exemple de commentaire Voici un exemple de commentaire</td>
+          <td>
+            <div class="btn-table">
+              <a href="" class="btn-see">Voir</a>
+              <a href="" class="btn-edit">Editer</a>
+              <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+            </div>
+          </td>
+    </tr>
+  </tbody>
+
+  </table>
+
+</article>
+
 </div>
 </section>
 </main>
