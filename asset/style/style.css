@@ -563,10 +563,16 @@ figcaption {
   display: flex;
 }
 
+.produit-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
 .dashboard h1,
 .page-panier h2,
 .profil-nav h3,
-.profil-section h2 {
+.section-title {
   display: none;
 }
 
@@ -580,16 +586,19 @@ figcaption {
   overflow: auto;
 }
 
-.vertical-li a {
-  display: block;
+.admin-input {
   color: #1d1d1c;
-  padding: 8px 16px;
-  text-decoration: none;
+  border: none;
+  width: 100%;
+  padding: 5px;
+  background: transparent;
+  font-size: 1.2rem;
 }
 
-.vertical-li a:hover {
-  background-color: #555;
-  color: white;
+.admin-input:hover {
+  transform: scale(1.05);
+  background: #1d1d1c;
+  color: #fff;
 }
 
 .add-produit,
@@ -601,20 +610,22 @@ figcaption {
 .form-produit {
   margin: 20px 0 0 20px;
   color: #1c1d1d;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .form-produit form {
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .form-produit form label {
-  padding: 10px 0 10px 0;
+  padding: 20px 0 20px 0;
 }
 
 .form-prix-produit {
-  padding: 10px 0 10px 0;
+  padding: 20px 0 20px 0;
 }
 
 .form-prix-produit input {
@@ -643,30 +654,36 @@ figcaption {
 }
 
 .submit-produit {
-  width: 120px;
+  width: 150px;
   height: 30px;
   border: 1px solid #9e9b98;
   padding: 5px;
   cursor: pointer;
   background: transparent;
+  font-size: 0.9rem;
 }
 
 .submit-produit:hover {
   transform: scale(1.05);
   border: 1px solid #1ae5be;
+  color: white;
+  background: #1d1d1c;
 }
 
 .tableau-produit,
 .client-dashboard,
 .commentaire-dashboard {
-  margin: 40px 20px 40px 20px;
+  margin: 40px 0 40px 20px;
   color: #1c1d1d;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
 }
 
 .tableau-produit table,
 .client-dashboard table,
 .commentaire-dashboard table {
-  margin-top: 20px;
+  margin-top: 15px;
   border-collapse: collapse;
   min-width: 60vw;
 }
@@ -719,6 +736,12 @@ figcaption {
 .client-dashboard,
 .commentaire-dashboard {
   display: none;
+}
+
+.nb-vues {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0 0 20px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -849,7 +872,7 @@ figcaption {
   .section_hero h1 {
     font-size: 3em;
   }
-  
+
   .profil_information,
   .my_mdp {
     width: 300px;

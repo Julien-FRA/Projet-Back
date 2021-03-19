@@ -4,40 +4,72 @@
 <?php include 'server/config/admin_check.php'; ?>
 <?php include 'server/admin/add_product.php'; ?>
 
-<main>
+
+<main id="admin">
 <section class="dashboard">
 <h1>Dashboard administrateur</h1>
   <div class="left-dashboard">
     <ul class="vetical-ul">
-        <li class="vertical-li" ><a id="produits">Produits</a></li>
-        <li class="vertical-li" ><a id="clients">Clients</a></li>
-        <li class="vertical-li" ><a id="com">Commentaires</a></li>
+    
+        <li class="vertical-li" ><input type="button" value="Produits" id="produits" class="admin-input"></li>
+        <li class="vertical-li" ><input type="button" value="Clients" id="clients" class="admin-input"></li>
+        <li class="vertical-li" ><input type="button" value="Commentaires" id="com" class="admin-input"></li>
     </ul>
   </div>
 
 <div class="produit-dashboard">
 
 <article class="form-produit">
-  <h2 class="add-produit">Ajoutez un produit :</h2>
-  <form method="post" enctype='multipart/form-data'>
+  <h2 class="add-produit">Ajoutez un produit</h2>
+  <form method="post">
     <div class="form-img-produit">
-      <label>Image du produit :</label>
+      <label >Image du produit</label>
       <input type="file" class="input-file" name="img_produit">
     </div>
-    <label>Titre du produit :</label>
+    <label>Titre du produit</label>
     <input class="input-titre" type="text" name="titre_produit">
-    <label>Description du produit :</label>
+    <label>Description du produit</label>
     <input class="input-desc" type="text" name="desc_produit">
     <div class="form-prix-produit">
-      <label>Prix du produit :</label>
+      <label>Prix du produit</label>
       <input class="input-prix" type="number" min="0" max="1000" value="" name="prix_produit">
     </div>
     <button class="submit-produit" type="submit" name="submit">Ajouter le produit</button>
   </form>
 </article>
 
+<article class="nb-vues">
+<h2 class="add-produit">Activité</h2>
+
+<?php
+$nb_visites = file_get_contents('data/pagesvues.txt');
+$nb_visites++;
+file_put_contents('data/pagesvues.txt', $nb_visites);
+echo 'Nombre de pages vues : <strong>' . $nb_visites . '</strong><br/>';
+
+$f_records = fopen('data/records.txt', 'r+'); 
+$dernierRecord = fgets($f_records); 
+$dernierRecord = explode(' ', $dernierRecord); 
+echo 'Record du nombre de pages vues : <strong>'; 
+
+if ($nb_visites > $dernierRecord[0]) 
+{
+	rewind($f_records); 
+	$ligne = $nb_visites . ' ' . date('d/m/Y'); 
+	fwrite($f_records, $ligne); 
+	echo $nb_visites . '</strong> établi le <strong>' . date('d/m/Y');
+} else { 
+	echo $dernierRecord[0] . '</strong> établi le <strong>' . $dernierRecord[1];
+}
+
+echo '</strong><br/>'; 
+fclose($f_records); 
+?>
+
+</article>
+
 <article class="tableau-produit" id="divProds">
-  <h2 class="add-produit">Voici un tableau de récap des produits :</h2>
+  <h2 class="add-produit">Voici un tableau de récap des produits</h2>
   <table>
 
     <thead>
@@ -71,7 +103,7 @@
 </article>
   
 <article class="client-dashboard" id="divClients">
-  <h2 class="add-client">Voici un tableau de récap des clients :</h2>
+  <h2 class="add-client">Voici un tableau de récap des clients</h2>
   <table>
 
   <thead>
@@ -103,7 +135,7 @@
 </article>
 
 <article class="commentaire-dashboard" id="divCom">
-  <h2 class="add-commentaire">Voici un tableau de récap des commentaires :</h2>
+  <h2 class="add-commentaire">Voici un tableau de récap des commentaires</h2>
   <table>
 
   <thead>
@@ -136,6 +168,8 @@
 
 </div>
 </section>
+
+
 </main>
 
 <?php include 'server/config/template/footer.php'; ?>
