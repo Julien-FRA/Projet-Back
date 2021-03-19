@@ -681,6 +681,10 @@ figcaption {
   padding: 5px;
 }
 
+.td-commentaire {
+  max-width: 150px;
+}
+
 .btn-table {
   display: flex;
   flex-direction: column;
