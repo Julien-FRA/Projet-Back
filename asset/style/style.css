@@ -563,6 +563,12 @@ figcaption {
   display: flex;
 }
 
+.produit-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
 .dashboard h1,
 .page-panier h2,
 .profil-nav h3,
@@ -671,6 +677,7 @@ figcaption {
   color: #1c1d1d;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
+  text-align: center;
 }
 
 .tableau-produit table,
@@ -729,6 +736,12 @@ figcaption {
 .client-dashboard,
 .commentaire-dashboard {
   display: none;
+}
+
+.nb-vues {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0 0 20px;
 }
 
 @media screen and (max-width: 1024px) {

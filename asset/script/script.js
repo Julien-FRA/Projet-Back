@@ -121,7 +121,7 @@ if (document.getElementById("admin")) {
       divClients.style.display = "none";
       divProds.style.display = "none";
     } else {
-      divPhotos.style.display = "none";
+      divCom.style.display = "none";
     }
   });
 }

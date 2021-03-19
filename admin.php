@@ -3,6 +3,7 @@
 <?php include 'server/config/template/nav.php'; ?>
 <?php include 'server/config/admin_check.php'; ?>
 
+
 <main id="admin">
 <section class="dashboard">
 <h1>Dashboard administrateur</h1>
@@ -34,6 +35,36 @@
     </div>
     <button class="submit-produit" type="submit" name="submit">Ajouter le produit</button>
   </form>
+</article>
+
+<article class="nb-vues">
+<h2 class="add-produit">Activité</h2>
+
+<?php
+$nb_visites = file_get_contents('data/pagesvues.txt');
+$nb_visites++;
+file_put_contents('data/pagesvues.txt', $nb_visites);
+echo 'Nombre de pages vues : <strong>' . $nb_visites . '</strong><br/>';
+
+$f_records = fopen('data/records.txt', 'r+'); 
+$dernierRecord = fgets($f_records); 
+$dernierRecord = explode(' ', $dernierRecord); 
+echo 'Record du nombre de pages vues : <strong>'; 
+
+if ($nb_visites > $dernierRecord[0]) 
+{
+	rewind($f_records); 
+	$ligne = $nb_visites . ' ' . date('d/m/Y'); 
+	fwrite($f_records, $ligne); 
+	echo $nb_visites . '</strong> établi le <strong>' . date('d/m/Y');
+} else { 
+	echo $dernierRecord[0] . '</strong> établi le <strong>' . $dernierRecord[1];
+}
+
+echo '</strong><br/>'; 
+fclose($f_records); 
+?>
+
 </article>
 
 <article class="tableau-produit" id="divProds">
@@ -136,6 +167,8 @@
 
 </div>
 </section>
+
+
 </main>
 
 <?php include 'server/config/template/footer.php'; ?>
