@@ -118,7 +118,7 @@
     <tr>
         <td>1</td>
         <td>Julien</td>
-        <td>Voici un exemple de commentaire Voici un exemple de commentaire</td>
+        <td class="td-commentaire">Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire</td>
           <td>
             <div class="btn-table">
               <a href="" class="btn-see">Voir</a>
