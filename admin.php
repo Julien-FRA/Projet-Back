@@ -18,18 +18,18 @@
 <div class="produit-dashboard">
 
 <article class="form-produit">
-  <h2 class="add-produit">Ajoutez un produit :</h2>
+  <h2 class="add-produit">Ajoutez un produit</h2>
   <form method="post">
     <div class="form-img-produit">
-      <label >Image du produit :</label>
+      <label >Image du produit</label>
       <input type="file" class="input-file" name="img_produit">
     </div>
-    <label>Titre du produit :</label>
+    <label>Titre du produit</label>
     <input class="input-titre" type="text" name="titre_produit">
-    <label>Description du produit :</label>
+    <label>Description du produit</label>
     <input class="input-desc" type="text" name="desc_produit">
     <div class="form-prix-produit">
-      <label>Prix du produit :</label>
+      <label>Prix du produit</label>
       <input class="input-prix" type="number" min="0" max="1000" value="" name="prix_produit">
     </div>
     <button class="submit-produit" type="submit" name="submit">Ajouter le produit</button>
@@ -37,7 +37,7 @@
 </article>
 
 <article class="tableau-produit" id="divProds">
-  <h2 class="add-produit">Voici un tableau de récap des produits :</h2>
+  <h2 class="add-produit">Voici un tableau de récap des produits</h2>
   <table>
 
     <thead>
@@ -71,7 +71,7 @@
 </article>
   
 <article class="client-dashboard" id="divClients">
-  <h2 class="add-client">Voici un tableau de récap des clients :</h2>
+  <h2 class="add-client">Voici un tableau de récap des clients</h2>
   <table>
 
   <thead>
@@ -103,7 +103,7 @@
 </article>
 
 <article class="commentaire-dashboard" id="divCom">
-  <h2 class="add-commentaire">Voici un tableau de récap des commentaires :</h2>
+  <h2 class="add-commentaire">Voici un tableau de récap des commentaires</h2>
   <table>
 
   <thead>
