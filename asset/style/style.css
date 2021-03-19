@@ -368,12 +368,12 @@ figcaption {
 
 /* Partie Profil */
 
-.user_pictures {
+.user-pictures {
   width: 15%;
   margin-right: 30px;
 }
 
-.user_name {
+.user-name {
   display: flex;
   align-items: center;
   color: white;
@@ -381,7 +381,7 @@ figcaption {
   padding: 0;
 }
 
-.user_figure {
+.user-figure {
   display: flex;
   justify-content: center;
   background: #1d1d1c;
@@ -391,7 +391,7 @@ figcaption {
   width: 500px;
 }
 
-.btn_profil {
+.btn-profil {
   width: 500px;
   height: 30px;
   border: 1px solid #9e9b98;
@@ -400,26 +400,26 @@ figcaption {
   background: transparent;
 }
 
-.profil_nav {
+.profil-nav {
   display: flex;
   flex-direction: column;
 }
 
-.profil_title {
+.profil-title {
   padding-bottom: 30px;
 }
 
-.profil_section {
+.profil-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 150px 0 150px 0;
 }
 
-.profil_information,
-.my_mdp,
-.my_pictures,
-.my_order {
+.profil-information,
+.my-mdp,
+.my-pictures,
+.my-order {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -428,37 +428,37 @@ figcaption {
   border: 1px solid #9e9b98;
 }
 
-.form_information {
+.form-information {
   display: flex;
   flex-direction: column;
 }
 
-.form_contain {
+.form-contain {
   display: flex;
   flex-direction: column;
 }
 
-.form_contain input {
+.form-contain input {
   width: 500px;
   height: 30px;
   margin: 10px 0 10px 0;
   border: 1px solid #9e9b98;
 }
 
-.btn_profil:hover {
+.btn-profil:hover {
   transform: scale(1.05);
   border: 1px solid #1ae5be;
   background: #1d1d1c;
   color: #fff;
 }
 
-.btn_profil:focus {
+.btn-profil:focus {
   outline: none;
 }
 
-.my_order,
-.my_mdp,
-.my_pictures {
+.my-order,
+.my-mdp,
+.my-pictures {
   display: none;
 }
 
@@ -471,6 +471,8 @@ figcaption {
 
 .table-prdt {
   padding: 30px 0 30px 0;
+  margin: 50px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .td-prdt {
@@ -480,6 +482,7 @@ figcaption {
 .td-prdt,
 .td-prdt img {
   width: 25%;
+  padding-top: 15px;
 }
 
 .td-prdt img {
@@ -503,12 +506,20 @@ figcaption {
 }
 
 .table-info {
-  margin: auto;
+  position: absolute;
+  right: 0;
+  padding: 30px 30px 30px 0;
   text-align: center;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .td-info {
   padding: 10px;
+}
+
+.position-table {
+  position: relative;
+  margin: 0 50px 0 50px;
 }
 
 /* Partie footer */
@@ -521,24 +532,24 @@ figcaption {
   background-color: #1d1d1c;
 }
 
-.footer_card {
+.footer-card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer_card img {
+.footer-card img {
   width: 100px;
   margin-bottom: 20px;
 }
 
-.footer_card h4 {
+.footer-card h4 {
   font-size: 20px;
   color: #fff;
   margin-bottom: 15px;
 }
 
-.footer_card p {
+.footer-card p {
   font-size: 18px;
   color: #fff;
   margin-bottom: 15px;
@@ -554,8 +565,8 @@ figcaption {
 
 .dashboard h1,
 .page-panier h2,
-.profil_nav h3,
-.profil_section h2 {
+.profil-nav h3,
+.profil-section h2 {
   display: none;
 }
 
@@ -710,8 +721,8 @@ figcaption {
     width: 70%;
   }
 
-  .profil_information,
-  .my_mdp {
+  .profil-information,
+  .my-mdp {
     margin-top: 30px;
   }
 }
@@ -768,23 +779,23 @@ figcaption {
     width: 250px;
   }
 
-  .profil_information,
-  .my_mdp,
-  .my_pictures,
-  .my_order {
+  .profil-information,
+  .my-mdp,
+  .my-pictures,
+  .my-order {
     width: 400px;
   }
 
-  .user_figure,
-  .btn_profil {
+  .user-figure,
+  .btn-profil {
     width: 400px;
   }
 
-  .my_mdp input {
+  .my-mdp input {
     margin-bottom: 15px;
   }
 
-  .form_contain input {
+  .form-contain input {
     width: 300px;
   }
 
@@ -818,6 +829,10 @@ figcaption {
 
   .table-img {
     display: none;
+  }
+
+  .table-prdt {
+    margin-top: 150px;
   }
 }
 
