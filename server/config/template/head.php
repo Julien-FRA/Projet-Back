@@ -1,5 +1,5 @@
 <?php
-require 'config/init.php';
+require 'server/config/init.php';
 
 ?>
 

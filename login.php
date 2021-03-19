@@ -1,5 +1,6 @@
-<?php include 'config/template/head.php'; ?>
-<?php include 'config/template/nav.php'; ?>
+<?php include 'server/config/template/head.php'; ?>
+<?php include 'server/config/template/nav.php'; ?>
+<?php include 'server/traitement_login.php'; ?>
 
 <main>
     <section class="sign in">
@@ -16,4 +17,4 @@
     </section>
 </main>
 <hr>
-<?php include 'config/template/footer.php'; ?>
+<?php include 'server/config/template/footer.php'; ?>
