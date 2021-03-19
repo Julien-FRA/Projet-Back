@@ -49,7 +49,7 @@
       </div>
     </article>
 
-    <article class="my-mdp" id=divmdp>
+    <article class="my-mdp" id="divmdp">
       <h2 class="profil-title">Changer de mot de passe</h2>
       <div class="form-contain">
         <label for="oldMdp">Ancien mot de passe: </label>
@@ -64,11 +64,11 @@
       </div>
     </article>
 
-    <article class="my-pictures" id=divphotos>
+    <article class="my-pictures" id="divphotos">
       <h2 class="profil-title">Changer de photo</h2>
     </article>
 
-    <article class="my-order" id=divcmd>
+    <article class="my-order" id="divcmd">
       <h2 class="profil-title">Mes Commandes</h2>
     </article>
 

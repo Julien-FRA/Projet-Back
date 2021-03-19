@@ -8,9 +8,9 @@
 <h1>Dashboard administrateur</h1>
   <div class="left-dashboard">
     <ul class="vetical-ul">
-        <li class="vertical-li"><a href="#home">Produits</a></li>
-        <li class="vertical-li"><a href="#news">Clients</a></li>
-        <li class="vertical-li"><a href="#contact">Commentaires</a></li>
+        <li class="vertical-li" ><a id="produits">Produits</a></li>
+        <li class="vertical-li" ><a id="clients">Clients</a></li>
+        <li class="vertical-li" ><a id="com">Commentaires</a></li>
     </ul>
   </div>
 
@@ -35,7 +35,7 @@
   </form>
 </article>
 
-<article class="tableau-produit">
+<article class="tableau-produit" id="divProds">
   <h2 class="add-produit">Voici un tableau de récap des produits :</h2>
   <table>
 
@@ -69,7 +69,7 @@
 
 </article>
   
-<article class="client-dashboard">
+<article class="client-dashboard" id="divClients">
   <h2 class="add-client">Voici un tableau de récap des clients :</h2>
   <table>
 
@@ -101,7 +101,7 @@
 
 </article>
 
-<article class="commentaire-dashboard">
+<article class="commentaire-dashboard" id="divCom">
   <h2 class="add-commentaire">Voici un tableau de récap des commentaires :</h2>
   <table>
 
