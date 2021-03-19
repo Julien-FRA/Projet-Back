@@ -20,6 +20,30 @@ try { // on essai ce code
 
 $content = "";
 
-var_dump($_SESSION['role']);
-// die;
-redirectRole();
+if (isset($_POST['submit'])) {
+    if (!empty($_FILES["img_produit"]["name"])) {
+        $img_produit = $_FILES['img_produit']['name'];
+        
+        
+        $target_dir = "wamp64/www/Projet-Back/asset/img";
+        $target_file = $target_dir . basename($_FILES["img_produit"]["name"]);
+        // Select file type
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        // Valid file extensions
+        $extensions_arr = array("jpg", "jpeg", "png", "gif");
+        var_dump($img_produit);
+        die;
+    }
+}
+
+
+?>
+
+
+<form method="post" action="" enctype='multipart/form-data'>
+  <input type='file' name='img_produit' />
+  <input type='submit' value='Save name' name='submit'>
+</form>
+
+
+
