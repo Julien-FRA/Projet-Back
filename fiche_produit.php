@@ -1,5 +1,5 @@
-<?php include 'config/template/head.php'; ?>
-<?php include 'config/template/nav.php'; ?>
+<?php include 'server/config/template/head.php'; ?>
+<?php include 'server/config/template/nav.php'; ?>
 
 <main>
     <section class="info_produit">
@@ -40,4 +40,4 @@
     </section>
 </main>
 
-<?php include 'config/template/footer.php'; ?>
+<?php include 'server/config/template/footer.php'; ?>

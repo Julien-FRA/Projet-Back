@@ -1,7 +1,7 @@
-<?php include 'config/template/head.php'; ?>
+<?php include 'server/config/template/head.php'; ?>
 
-<?php include 'config/template/nav.php'; ?>
-<?php include 'config/admin_check.php'; ?>
+<?php include 'server/config/template/nav.php'; ?>
+<?php include 'server/config/admin_check.php'; ?>
 
 <main>
 <section class="dashboard">
@@ -21,15 +21,15 @@
   <form method="post">
     <div class="form-img-produit">
       <label >Image du produit :</label>
-      <input type="file" class="input-file">
+      <input type="file" class="input-file" name="img_produit">
     </div>
     <label>Titre du produit :</label>
-    <input class="input-titre" type="text">
+    <input class="input-titre" type="text" name="titre_produit">
     <label>Description du produit :</label>
-    <input class="input-desc" type="text">
+    <input class="input-desc" type="text" name="desc_produit">
     <div class="form-prix-produit">
       <label>Prix du produit :</label>
-      <input class="input-prix" type="number" min="0" max="1000" value="">
+      <input class="input-prix" type="number" min="0" max="1000" value="" name="prix_produit">
     </div>
     <button class="submit-produit" type="submit" name="submit">Ajouter le produit</button>
   </form>
@@ -137,4 +137,4 @@
 </section>
 </main>
 
-<?php include 'config/template/footer.php'; ?>
+<?php include 'server/config/template/footer.php'; ?>

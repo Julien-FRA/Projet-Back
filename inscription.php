@@ -1,6 +1,8 @@
-<?php include 'config/template/head.php'; ?>
+<?php include 'server/config/template/head.php'; ?>
 
-<?php include 'config/template/nav.php'; ?>
+<?php include 'server/config/template/nav.php'; ?>
+
+<?php include 'server/traitement_inscription.php'; ?>
 
 <main>
     <section class="sign">
@@ -29,4 +31,4 @@
     </section>
 </main>
 <hr>
-<?php include 'config/template/footer.php'; ?>
+<?php include 'server/config/template/footer.php'; ?>
