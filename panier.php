@@ -33,6 +33,7 @@
                 </tr>
             </tbody>
         </table>
+        <div class = "position-table" >
         <table class="table-info">
             <thead class="thead-info">
                 <tr class="tr-info">
@@ -49,6 +50,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </section>
 </main>
 <hr>
