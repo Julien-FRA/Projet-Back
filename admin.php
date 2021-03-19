@@ -3,14 +3,15 @@
 <?php include 'config/template/nav.php'; ?>
 <?php include 'config/admin_check.php'; ?>
 
-<main>
+<main id="admin">
 <section class="dashboard">
 <h1>Dashboard administrateur</h1>
   <div class="left-dashboard">
     <ul class="vetical-ul">
-        <li class="vertical-li" ><a id="produits">Produits</a></li>
-        <li class="vertical-li" ><a id="clients">Clients</a></li>
-        <li class="vertical-li" ><a id="com">Commentaires</a></li>
+    
+        <li class="vertical-li" ><input type="button" value="Produits" id="produits" class="admin-input"></li>
+        <li class="vertical-li" ><input type="button" value="Clients" id="clients" class="admin-input"></li>
+        <li class="vertical-li" ><input type="button" value="Commentaires" id="com" class="admin-input"></li>
     </ul>
   </div>
 

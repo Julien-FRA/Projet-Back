@@ -2,9 +2,9 @@
 <?php include 'config/template/nav.php'; ?>
 <?php include 'config/login_check.php'; ?>
 
-<main>
+<main id="profil">
   <section class="profil-section">
-    <h2>Page du profil</h2>
+    <h2 class="section-title">Page du profil</h2>
     <article class="profil-nav">
       <h3>Navigation</h3>
       <figure class="user-figure">
