@@ -21,19 +21,31 @@ try { // on essai ce code
 $content = "";
 
 if (isset($_POST['submit'])) {
+
     if (!empty($_FILES["img_produit"]["name"])) {
-        $img_produit = $_FILES['img_produit']['name'];
-        
-        
-        $target_dir = "wamp64/www/Projet-Back/asset/img";
+
+        $img_produit = $_FILES['img_produit']['name'];    
+        $target_dir = "../../asset/upload/";//C:\wamp64\www\Projet-Back\asset\upload\\
         $target_file = $target_dir . basename($_FILES["img_produit"]["name"]);
         // Select file type
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         // Valid file extensions
         $extensions_arr = array("jpg", "jpeg", "png", "gif");
-        var_dump($img_produit);
-        die;
-    }
+        
+        if(in_array($imageFileType, $extensions_arr)) {
+            if(move_uploaded_file($_FILES['img_produit']['tmp_name'], $target_file)) {
+                $uniq_file_name = str_replace(' ', '_', uniqid() . '_' . basename($_FILES["img_produit"]["name"]));
+                if(rename($target_dir . basename($_FILES["img_produit"]["name"]), $target_dir . $uniq_file_name))
+                    echo basename($_FILES["img_produit"]["name"]);
+            } else {
+              echo 'Erreur de traitement du fichier image';
+            }
+        } else {
+            echo 'Vous devez avoir un fichier de type jpg jpeg png ou gif';
+        }
+      } else {
+        echo 'Veuillez insérer votre image';
+      }
 }
 
 
