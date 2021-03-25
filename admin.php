@@ -2,6 +2,7 @@
 
 <?php include 'server/config/template/nav.php'; ?>
 <?php include 'server/config/admin_check.php'; ?>
+<?php include 'server/admin/add_product.php'; ?>
 
 
 <main id="admin">
@@ -20,7 +21,7 @@
 
 <article class="form-produit">
   <h2 class="add-produit">Ajoutez un produit</h2>
-  <form method="post">
+  <form method="post" enctype='multipart/form-data'>
     <div class="form-img-produit">
       <label >Image du produit</label>
       <input type="file" class="input-file" name="img_produit">
