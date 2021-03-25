@@ -33,23 +33,23 @@
                 </tr>
             </tbody>
         </table>
-        <div class = "position-table" >
-        <table class="table-info">
-            <thead class="thead-info">
-                <tr class="tr-info">
-                    <th class="th-info">Prix livraison</th>
-                    <th class="th-info">Prix total</th>
-                    <th class="th-info">Commander</th>
-                </tr>
-            </thead>
-            <tbody class="tbody-info">
-                <tr class="tr-info-desc">
-                    <td class="td-info">$5</td>
-                    <td class="td-info">$504</td>
-                    <td class="td-prdt retirer td-info"><button>Paiement</button></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="position-table">
+            <table class="table-info">
+                <thead class="thead-info">
+                    <tr class="tr-info">
+                        <th class="th-info">Prix livraison</th>
+                        <th class="th-info">Prix total</th>
+                        <th class="th-info">Commander</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody-info">
+                    <tr class="tr-info-desc">
+                        <td class="td-info">$5</td>
+                        <td class="td-info">$504</td>
+                        <td class="td-prdt retirer td-info"><button>Paiement</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </main>
