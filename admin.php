@@ -3,7 +3,6 @@
 <?php include 'server/config/template/nav.php'; ?>
 <?php include 'server/config/admin_check.php'; ?>
 <?php include 'server/admin/add_product.php'; ?>
-<?php include 'server/admin/delete.php'; ?>
 
 <?php
 
@@ -99,8 +98,7 @@ $client = $pdo->query('SELECT * FROM clients');
               <td><?= $all['prix_produit']; ?></td>
               <td>
                 <div class="btn-table">
-                  <a href="" class="btn-see">Voir</a>
-                  <a href="" class="btn-edit">Editer</a>
+                  <a href="server/admin/edit.php?id=<?= $all['id_produit']; ?>" class="btn-edit">Editer</a>
                   <a href="server/admin/delete.php?id=<?= $all['id_produit']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
                 </div>
               </td>
@@ -137,9 +135,8 @@ $client = $pdo->query('SELECT * FROM clients');
               <td><?= $inf['role_client']; ?></td>
               <td>
                 <div class="btn-table">
-                  <a href="" class="btn-see">Voir</a>
-                  <a href="" class="btn-edit">Editer</a>
-                  <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+                  <a href="server/admin/edit_client.php?id=<?= $inf['id_client']; ?>" class="btn-edit">Editer</a>
+                  <a href="server/admin/delete_client.php?id=<?= $inf['id_client']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
                 </div>
               </td>
             </tr>
@@ -172,7 +169,6 @@ $client = $pdo->query('SELECT * FROM clients');
               <td class="td-commentaire">Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire</td>
               <td>
                 <div class="btn-table">
-                  <a href="" class="btn-see">Voir</a>
                   <a href="" class="btn-edit">Editer</a>
                   <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
                 </div>
