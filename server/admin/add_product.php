@@ -4,9 +4,6 @@
 
 if (isset($_POST['submit'])) {
 
-  // var_dump($_POST);
-  // die;
-
   if (!empty($_FILES['img_produit']['name'])) {
 
 
@@ -28,7 +25,7 @@ if (isset($_POST['submit'])) {
             if (move_uploaded_file($_FILES['img_produit']['tmp_name'], $target_file)) {
               $uniq_file_name = str_replace(' ', '_', uniqid() . '_' . basename($_FILES["img_produit"]["name"]));
                 if (rename($target_dir . basename($_FILES["img_produit"]["name"]), $target_dir . $uniq_file_name)) 
-                  echo basename($_FILES["img_produit"]["name"]);
+                  // echo basename($_FILES["img_produit"]["name"]);
 
               try {
 
@@ -36,7 +33,7 @@ if (isset($_POST['submit'])) {
                 $sth = $pdo->prepare("
                         INSERT INTO produits(img_produit, titre_produit, desc_produit, prix_produit)
                         VALUES(:img_produit, :titre_produit, :desc_produit, :prix_produit)");
-                $sth->bindParam(':img_produit', $img_produit);
+                $sth->bindParam(':img_produit', $uniq_file_name);
                 $sth->bindParam(':titre_produit', $titre_produit);
                 $sth->bindParam(':desc_produit', $desc_produit);
                 $sth->bindParam(':prix_produit', $prix_produit);

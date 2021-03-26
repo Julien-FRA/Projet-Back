@@ -3,7 +3,14 @@
 <?php include 'server/config/template/nav.php'; ?>
 <?php include 'server/config/admin_check.php'; ?>
 <?php include 'server/admin/add_product.php'; ?>
+<?php include 'server/admin/delete.php'; ?>
 
+<?php
+
+$req = $pdo->query('SELECT * FROM produits');
+$client = $pdo->query('SELECT * FROM clients');
+
+?>
 
 <main id="admin">
   <section class="dashboard">
@@ -82,19 +89,25 @@
           </thead>
 
           <tbody>
+            <?php 
+            while (false !== ($all = $req->fetch(PDO::FETCH_ASSOC))) {
+            ?>
             <tr>
-              <td>1</td>
-              <td class="table-img"><img src="asset/img/ransomware.png" alt=""></td>
-              <td>Hack</td>
-              <td>Hack</td>
+              <td><?= $all['id_produit']; ?></td>
+              <td class="table-img"><img src="asset/upload/<?= $all['img_produit']; ?>" alt=""></td>
+              <td><?= $all['titre_produit']; ?></td>
+              <td><?= $all['prix_produit']; ?></td>
               <td>
                 <div class="btn-table">
                   <a href="" class="btn-see">Voir</a>
                   <a href="" class="btn-edit">Editer</a>
-                  <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+                  <a href="server/admin/delete.php?id=<?= $all['id_produit']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
                 </div>
               </td>
             </tr>
+            <?php
+            }
+            ?>
           </tbody>
 
         </table>
@@ -115,10 +128,13 @@
           </thead>
 
           <tbody>
+          <?php 
+            while (false !== ($inf = $client->fetch(PDO::FETCH_ASSOC))) {
+          ?>
             <tr>
-              <td>1</td>
-              <td>Julien</td>
-              <td>Admin</td>
+              <td><?= $inf['id_client']; ?></td>
+              <td><?= $inf['nom_client']; ?></td>
+              <td><?= $inf['role_client']; ?></td>
               <td>
                 <div class="btn-table">
                   <a href="" class="btn-see">Voir</a>
@@ -127,6 +143,9 @@
                 </div>
               </td>
             </tr>
+            <?php
+            }
+            ?>
           </tbody>
 
         </table>
