@@ -2,6 +2,10 @@
 
 <?php include 'server/config/template/nav.php'; ?>
 
+<?php
+    $prd = $pdo->query('SELECT titre_produit, prix_produit, img_produit, id_produit FROM produits');
+?>
+
 <main>
   <!-- <h2 class="">Page Accueil</h2> -->
 
@@ -14,52 +18,26 @@
   </section>
 
   <section class="section_article">
-    <figure>
-      <figcaption>
-        <h3>Virus</h3>
-      </figcaption>
-      <div class="product">
-        <img src="asset/img/virus.png" alt="photo article virus" class="article-pictures" />
-        <img src="asset/img/star.png" alt="notation produit" />
-        <p class="price">$499</p>
-        <a href="fiche_produit.php" class="discover-button button-fx">DECOUVRIR</a>
-      </div>
-    </figure>
-    <figure>
-      <figcaption>
-        <h3>Vers</h3>
-      </figcaption>
-      <div class="product">
-        <img src="asset/img/vers.png" alt="photo article vers" class="article-pictures" />
-        <img src="asset/img/star.png" alt="notation produit" />
-        <p class="price">$499</p>
-        <a href="fiche_produit.php" class="discover-button button-fx">DECOUVRIR</a>
-      </div>
-    </figure>
-    <figure>
-      <figcaption>
-        <h3>Spyware</h3>
-      </figcaption>
-      <div class="product">
-        <img src="asset/img/spyware.png" alt="photo article spyware" class="article-pictures" />
-        <img src="asset/img/star.png" alt="notation produit" />
-        <p class="price">$499</p>
-        <a href="fiche_produit.php" class="discover-button button-fx">DECOUVRIR</a>
-      </div>
-    </figure>
-    <figure>
-      <figcaption>
-        <h3>Ransomeware</h3>
-      </figcaption>
-      <div class="product">
-        <img src="asset/img/ransomware.png" alt="photo article ransomeware" class="article-pictures" />
-        <img src="asset/img/star.png" alt="notation produit" />
-        <p class="price">$499</p>
-        <a href="fiche_produit.php" class="discover-button button-fx">DECOUVRIR</a>
-      </div>
-    </figure>
-  </section>
 
+  <?php while ($donn = $prd->fetch()){
+   ?>
+   <figure>
+    <figcaption>
+      <h3><?php echo $donn['titre_produit'];?></h3>
+    </figcaption>
+    <div class="product">
+    <img src="asset/upload/<?= $donn['img_produit']; ?>" alt="photo article virus" class="article-pictures" />
+      <img src="asset/img/star.png" alt="notation produit" />
+      <p class="price">$<?php echo $donn['prix_produit'];?></p>
+      <a href="fiche_produit.php?id=<?php echo $donn['id_produit'];?>" class="discover-button button-fx">DECOUVRIR</a>
+    </div>
+  </figure>
+
+<?php
+  }
+?>
+
+  </section>
   <section class="section_hero">
     <div class="hero-inner">
       <h1>A propos de nous</h1>
