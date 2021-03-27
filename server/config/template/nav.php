@@ -5,7 +5,14 @@
             <li><a href="index.php">Accueil</a></li>
             <li><a href="inscription.php">Inscription</a></li>
             <li><a href="login.php">Login</a></li>
-            <li><a href="profil.php">Profil</a></li>
+            <?php if (isset($_SESSION['loggedin']) && ($_SESSION['loggedin'] == true) && ($_SESSION['role'] == 0)) {
+                echo '<li><a href="profil.php">Profil</a></li>';
+            };
+            ?>
+            <?php if (isset($_SESSION['loggedin']) && ($_SESSION['loggedin'] == true) && ($_SESSION['role'] == 1)) {
+                echo '<li><a href="admin.php">Admin</a></li>';
+            };
+            ?>
             <li><a href="panier.php">Panier</a></li>
         </ul>
         <div class="burger">

@@ -15,8 +15,8 @@ if (isset($_GET['id'])) {
     http_response_code(404);
 }
 if (isset($_POST['send'])) {
-    if (isset($_POST['name']) && $_POST['name'] !== '') {
-        $nom_client = $_POST['name'];
+    if (isset($_POST['nom_client']) && $_POST['nom_client'] !== '') {
+        $nom_client = $_POST['nom_client'];
         if(isset($_POST['role_client']) && $_POST['role_client'] !== '') {
             $role_client = $_POST['role_client'];
             $role_client = intval($role_client);
@@ -25,8 +25,8 @@ if (isset($_POST['send'])) {
 
                 //On insère les données reçues
                 $sth = $pdo->prepare("
-      UPDATE clients SET name=:nom_client, role_client=:role_client WHERE id_client=:id;");
-                $sth->bindParam(':name', $nom_client);
+      UPDATE clients SET nom_client=:nom_client, role_client=:role_client WHERE id_client=:id;");
+                $sth->bindParam(':nom_client', $nom_client);
                 $sth->bindParam(':role_client', $role_client);
                 $sth->bindParam(':id', $_GET['id']);
                 $sth->execute();
@@ -74,12 +74,12 @@ if (isset($_POST['send'])) {
                 <h2 class="add-produit">Editer un client</h2>
                 <form method="post" enctype='multipart/form-data'>
                     <label>Nouveau nom du client</label>
-                    <input class="input-titre" type="text" name="name" value="<?= $row['nom_client'] ?>">
+                    <input class="input-titre" type="text" name="nom_client" value="<?= $row['nom_client'] ?>">
                     <div class="form-prix-produit">
                         <label>Nouveau role du client</label>
                         <select name="role_client">
-                            <option value="0">Membre</option>
-                            <option value="1">Admin</option>
+                            <option value="0" name="role_client">Membre</option>
+                            <option value="1" name="role_client">Admin</option>
                         </select>
                     </div>
                     <button class="submit-produit" type="submit" name="send">Enregistrer</button>
