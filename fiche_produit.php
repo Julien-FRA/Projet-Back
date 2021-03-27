@@ -20,17 +20,10 @@ if (count($donnees) <= 0) header("Location:index.php");
             </div>
         </div>
         <article class="desc_produit">
-<<<<<<< HEAD
             <h4><?php echo $donnees['titre_produit'];?></h4>
             <p class="price">$<?php echo $donnees['prix_produit'];?></p>
             <p class="desc_text"><?php echo $donnees['desc_produit'];?></p>
             <a href="addpanier.php?id=<?php echo $donnees['id_produit'];?>" class="btn_achat">Achetez</a>
-=======
-            <h4><?php echo $donnees['titre_produit']; ?></h4>
-            <p class="price">$<?php echo $donnees['prix_produit']; ?></p>
-            <p class="desc_text"><?php echo $donnees['desc_produit']; ?></p>
-            <input type="button" value="Achetez" class="btn_achat">
->>>>>>> fc524e0022c5369531296e2f4ab8748dc746d3c2
         </article>
     </section>
     <section class="more_info">
