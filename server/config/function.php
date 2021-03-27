@@ -66,4 +66,8 @@ return [];
 
     $produit = $result->fetch();
 return $produit;
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> fc524e0022c5369531296e2f4ab8748dc746d3c2
