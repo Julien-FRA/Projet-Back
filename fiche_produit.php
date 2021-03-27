@@ -21,7 +21,7 @@
             <h4><?php echo $donnees['titre_produit'];?></h4>
             <p class="price">$<?php echo $donnees['prix_produit'];?></p>
             <p class="desc_text"><?php echo $donnees['desc_produit'];?></p>
-            <input type="button" value="Achetez" class="btn_achat">
+            <a href="addpanier.php?id=<?php echo $donnees['id_produit'];?>" class="btn_achat">Achetez</a>
         </article>
     </section>
     <section class="more_info">

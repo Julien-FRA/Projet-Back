@@ -53,3 +53,17 @@ function redirectRole()
         header("location: profil.php");
     }
 };
+
+function selectProduit($id_produit, $pdo): array
+{
+    if(!is_int($id_produit)){
+return [];
+    }
+
+    $result = $pdo->prepare('SELECT * FROM produits WHERE id_produit = ?');
+
+    $result->execute([$id_produit]);
+
+    $produit = $result->fetch();
+return $produit;
+};

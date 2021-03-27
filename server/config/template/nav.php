@@ -6,7 +6,7 @@
             <li><a href="inscription.php">Inscription</a></li>
             <li><a href="login.php">Login</a></li>
             <li><a href="profil.php">Profil</a></li>
-            <li><a href="panier.php">Panier</a></li>
+            <li><a href="addpanier.php">Panier</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>

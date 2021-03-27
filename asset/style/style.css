@@ -217,6 +217,7 @@ figcaption {
   color: #1d1d1c;
   border: #1d1d1c 2px solid;
   cursor: pointer;
+  padding: 10px;
 }
 
 .btn_achat:hover,
@@ -506,7 +507,7 @@ figcaption {
 }
 
 .table-info {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
   padding: 30px 30px 30px 0;
   text-align: center;
@@ -520,6 +521,7 @@ figcaption {
 .position-table {
   position: relative;
   margin: 0 50px 0 50px;
+  margin-bottom: 100px;
 }
 
 /* Partie footer */
