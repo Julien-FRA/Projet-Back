@@ -1,58 +1,10 @@
 <?php include 'server/config/template/head.php'; ?>
 <?php include 'server/config/template/nav.php'; ?>
-
-<?php  
-
-if($_SESSION['loggedin'] == false){
- 
-  header("Location:login.php");
-
-}else{
-
-
-$panier = $pdo->query('SELECT * FROM panier WHERE id_client = '.$_SESSION['id'].'');
-$sommes=$pdo->query('SELECT SUM(prix_produit) FROM panier WHERE id_client = '.$_SESSION['id'].'');
-$somm = $sommes->fetch();
-
-if(isset($_GET['id']) && ($_SESSION['loggedin'] == true)){
-  
-  $test = $_SESSION['id'];
-  $idprod = $_GET['id'];
-
-  $dun = selectProduit(intval($idprod), $pdo);
-  if(count($dun)>0){
-
-  $titre= $dun['titre_produit'];
-  $prix= $dun['prix_produit'];
-  $img= $dun['img_produit'];
-  
-
-     // On insère les données reçues
-      $glo = $pdo->prepare("
-      INSERT INTO panier (id_client, id_produit, prix_produit, img_produit, titre_produit)
-      VALUES(:id_client, :id_produit, :prix_produit, :img_produit, :titre_produit)");
-$glo->bindParam(':id_client', $test);
-$glo->bindParam(':id_produit', $idprod);
-$glo->bindParam(':prix_produit', $prix);
-$glo->bindParam(':img_produit', $img);
-$glo->bindParam(':titre_produit', $titre);
-$glo->execute();
-
-// var_dump($sommes);
-  }else{
-    
-  }
-}
-}
-
-
-
-?>
-
+<?php include 'validation_panier.php'; ?>
 
 
 <section class="page-panier">
-        <h2>Mon Panier</h2>
+        <h2>Mon Panier </h2>
         <table class="table-prdt">
             <thead class="thead-prdt">
                 <tr class="tr-prdt">
@@ -94,12 +46,16 @@ $glo->execute();
                 <tbody class="tbody-info">
                     <tr class="tr-info-desc">
                         <td class="td-info">$5</td>
-                        <td class="td-info">$<?php echo($somm[0]);?></td>
-                        <td class="td-prdt retirer td-info"><button>Paiement</button></td>
+                        <td class="td-info">$<?=($somm);?></td>
+                        <form class="validation" method="post">
+                        <td class="td-prdt retirer td-info"><input type="submit" value="Paiement" name="envoyer" class="validation"></td>
+                        </form>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        
     </section>
 
 
