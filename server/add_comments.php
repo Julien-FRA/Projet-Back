@@ -8,6 +8,9 @@ if (isset($_POST['submit-comm'])) {
         if (isset($_POST['text_commentaire']) && $_POST['text_commentaire'] !== '') {
             $text_commentaire = $_POST['text_commentaire'];
 
+            // var_dump($nom_client, $text_commentaire);
+            // die;
+
             try {
 
                 //On insère les données reçues

@@ -13,7 +13,7 @@
                 echo '<li><a href="admin.php">Admin</a></li>';
             };
             ?>
-            <li><a href="panier.php">Panier</a></li>
+            <li><a href="addpanier.php">Panier</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
