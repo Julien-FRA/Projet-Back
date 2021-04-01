@@ -67,3 +67,36 @@ return [];
     $produit = $result->fetch();
 return $produit;
 };
+
+function addPanier($pdo, $test, $idprod, $prix, $img, $titre)
+{
+
+    $queryInsert = "INSERT INTO panier(id_client, id_produit, prix_produit, img_produit, titre_produit) VALUES (:id_client,:id_produit,:prix_produit,:img_produit,:titre_produit)";
+
+    $glo = $pdo->prepare($queryInsert);
+    $glo->execute(
+        [
+            'id_client' => $test,
+            'id_produit' => $idprod,
+            'prix_produit' => $prix,
+            'img_produit' => $img,
+            'titre_produit' => $titre,
+        ]
+    );
+    header("location: addpanier.php");
+};
+
+function addCommand($pdo, $test, $somm)
+{
+
+    $queryInsert = "INSERT INTO commandes(id_client, paie_type, prix_commande) VALUES (:id_client,:paie_type,:prix_commande)";
+
+    $reqCom = $pdo->prepare($queryInsert);
+    $reqCom->execute(
+        [
+            'id_client' => $test,
+            'paie_type' => 'paypal',
+            'prix_commande' => $somm,
+        ]
+    );
+};

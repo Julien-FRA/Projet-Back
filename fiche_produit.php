@@ -33,10 +33,10 @@ if (count($donnees) <= 0) header("Location:index.php");
     </section>
     <section class="ad_comments">
         <p class="tittle">Espace commentaire :</p>
-        <form action="server/add_comments.php" class="form" method="post">
+        <form action="server/add_comments.php?id=<?php echo $donnees['id_produit'];?>" class="form" method="post">
             <input type="hidden" value="<?= $donnees['id_produit']; ?>">
-            <label for="" class="info_comments">Auteur :</label>
-            <input type="text" name="nom_client" id="" class="author" placeholder="Votre pseudo">
+            <!-- <label for="" class="info_comments">Auteur :</label>
+            <input type="text" name="nom_client" id="" class="author" placeholder="Votre pseudo"> -->
             <label for="" class="info_comments">Commentaire :</label>
             <input type="text" name="text_commentaire" id="" class="comments" placeholder="Votre commentaire">
             <button type="submit" class="btn_achat send" name="submit-comm">Envoyer</button>

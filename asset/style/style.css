@@ -425,7 +425,7 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  /* width: 600px; */
   border: 1px solid #9e9b98;
 }
 

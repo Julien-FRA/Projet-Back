@@ -1,6 +1,9 @@
 <?php include 'server/config/template/head.php'; ?>
 <?php include 'server/config/template/nav.php'; ?>
 <?php include 'server/config/login_check.php'; ?>
+<?php
+$cmd = $pdo->query('SELECT * FROM commandes WHERE id_client = '.$_SESSION['id'].'');
+?>
 
 <main id="profil">
   <section class="profil-section">
@@ -68,8 +71,35 @@
       <h2 class="profil-title">Changer de photo</h2>
     </article>
 
-    <article class="my-order" id="divcmd">
+    <article class="my-order tableau-produit" id="divcmd">
       <h2 class="profil-title">Mes Commandes</h2>
+      <table>
+
+          <thead>
+            <tr>
+              <th>Id client</th>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Prix</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php 
+            while (false !== ($al = $cmd->fetch(PDO::FETCH_ASSOC))) {
+            ?>
+            <tr>
+              <td><?= $al['id_client']; ?></td>
+              <td><?= $al['date_commande']; ?></td>
+              <td><?= $al['paie_type']; ?></td>
+              <td><?= $al['prix_commande']; ?></td>
+            </tr>
+            <?php
+            }
+            ?>
+          </tbody>
+
+        </table>
     </article>
 
   </section>
@@ -77,3 +107,5 @@
 <hr>
 
 <?php include 'server/config/template/footer.php'; ?>
+
+
