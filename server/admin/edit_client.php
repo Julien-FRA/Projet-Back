@@ -2,6 +2,8 @@
 
 include_once('../../server/config/bdd.php');
 
+$err_prt = '';
+
 if (isset($_GET['id'])) {
     $stmt = $pdo->prepare('SELECT * FROM clients WHERE id_client=?');
     $stmt->bindParam(1, $_GET['id'], PDO::PARAM_INT);
@@ -38,10 +40,10 @@ if (isset($_POST['send'])) {
                 echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
             }
         } else {
-            echo 'Veuillez rentrer le role de votre client';
+            $err_prt = '<div class="err-prdt">Veuillez rentrer le role de votre client</div>';
         }
     } else {
-        echo 'Veuillez rentrer le nom de votre client';
+        $err_prt = '<div class="err-prdt">Veuillez rentrer le nom de votre client</div>';
     }
 }
 
@@ -83,6 +85,7 @@ if (isset($_POST['send'])) {
                         </select>
                     </div>
                     <button class="submit-produit" type="submit" name="send">Enregistrer</button>
+                    <?= $err_prt; ?>
                 </form>
             </article>
         </div>

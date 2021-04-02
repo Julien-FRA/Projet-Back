@@ -16,7 +16,6 @@ $cmd = $pdo->query('SELECT * FROM commandes WHERE id_client = '.$_SESSION['id'].
       </figure>
       <input type="button" value="Apercu du compte" class="btn-profil" id="infos">
       <input type="button" value="Mes commandes" class="btn-profil" id="cmd">
-      <input type="button" value="Modifier la photo" class="btn-profil" id="photos">
       <input type="button" value="Modifier le mot de passe" class="btn-profil" id="mdp">
     </article>
     <article class="profil-information" id="divinfo">
@@ -65,10 +64,6 @@ $cmd = $pdo->query('SELECT * FROM commandes WHERE id_client = '.$_SESSION['id'].
       <div class="submit-wrap">
         <input type="submit" value="Envoyer" class="submit">
       </div>
-    </article>
-
-    <article class="my-pictures" id="divphotos">
-      <h2 class="profil-title">Changer de photo</h2>
     </article>
 
     <article class="my-order tableau-produit" id="divcmd">

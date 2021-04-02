@@ -285,6 +285,29 @@ figcaption {
   margin-top: 20px;
 }
 
+.section-commentaire {
+  padding: 20px 20px 20px 40px;
+}
+
+.div-commentaire,
+.tittle.commentaires {
+  padding-bottom: 20px;
+}
+
+.date-commentaire {
+  font-weight: bold;
+}
+
+.nom-commentaire {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.text-commentaire {
+  padding-top: 10px;
+}
+
 /* Partie inscription */
 
 .sign {
@@ -490,7 +513,8 @@ figcaption {
   min-width: 100px;
 }
 
-.td-prdt button {
+.td-prdt button,
+.td-prdt .validation {
   width: 100px;
   height: 30px;
   border: 1px solid #9e9b98;
@@ -499,7 +523,8 @@ figcaption {
   background: transparent;
 }
 
-.td-prdt button:hover {
+.td-prdt button:hover,
+.td-prdt .validation:hover {
   transform: scale(1.05);
   border: 1px solid #1ae5be;
   background: #1d1d1c;
@@ -606,7 +631,8 @@ figcaption {
 
 .add-produit,
 .add-client,
-.add-commentaire {
+.add-commentaire,
+.add-commande {
   padding-bottom: 20px;
 }
 
@@ -675,7 +701,8 @@ figcaption {
 
 .tableau-produit,
 .client-dashboard,
-.commentaire-dashboard {
+.commentaire-dashboard,
+.commande-dashboard {
   margin: 40px 0 40px 20px;
   color: #1c1d1d;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
@@ -685,7 +712,8 @@ figcaption {
 
 .tableau-produit table,
 .client-dashboard table,
-.commentaire-dashboard table {
+.commentaire-dashboard table,
+.commande-dashboard table {
   margin-top: 15px;
   border-collapse: collapse;
   min-width: 60vw;
@@ -693,7 +721,8 @@ figcaption {
 
 .tableau-produit td,
 .client-dashboard td,
-.commentaire-dashboard td {
+.commentaire-dashboard td,
+.commande-dashboard td {
   text-align: center;
   border: solid 1px lightgray;
   min-width: 50px;
@@ -707,7 +736,8 @@ figcaption {
 
 .tableau-produit th,
 .client-dashboard th,
-.commentaire-dashboard th {
+.commentaire-dashboard th,
+.commande-dashboard th {
   border: solid 1px lightgray;
   padding: 5px;
 }
@@ -745,6 +775,13 @@ figcaption {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 20px 0 0 20px;
+}
+
+.err-prdt {
+  background-color: red;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 1024px) {

@@ -2,6 +2,8 @@
 
 // Admin, ajout des produits
 
+$err_prt = '';
+
 if (isset($_POST['submit'])) {
 
   if (!empty($_FILES['img_produit']['name'])) {
@@ -25,7 +27,6 @@ if (isset($_POST['submit'])) {
             if (move_uploaded_file($_FILES['img_produit']['tmp_name'], $target_file)) {
               $uniq_file_name = str_replace(' ', '_', uniqid() . '_' . basename($_FILES["img_produit"]["name"]));
                 if (rename($target_dir . basename($_FILES["img_produit"]["name"]), $target_dir . $uniq_file_name)) 
-                  // echo basename($_FILES["img_produit"]["name"]);
 
               try {
 
@@ -45,21 +46,21 @@ if (isset($_POST['submit'])) {
                 echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
               }
             } else {
-              echo 'Erreur de traitement du fichier image';
+              $err_prt = '<div class="err-prdt">Erreur de traitement du fichier image</div>';
             }
           } else {
-            echo 'Vous devez avoir un fichier de type jpg jpeg png ou gif';
+            $err_prt = '<div class="err-prdt">Vous devez avoir un fichier de type jpg jpeg png ou gif</div>';
           }
         } else {
-          echo 'Veuillez rentrez le prix de votre produit';
+          $err_prt = '<div class="err-prdt">Veuillez rentrez le prix de votre produit</div>';
         }
       } else {
-        echo 'Veuillez rentrer la description de votre produit';
+        $err_prt = '<div class="err-prdt">Veuillez rentrer la description de votre produit</div>';
       }
     } else {
-      echo 'Veuillez rentrer le nom de votre produit';
+      $err_prt = '<div class="err-prdt">Veuillez rentrer le nom de votre produit</div>';
     }
   } else {
-    echo 'Veuillez insérer votre image';
+    $err_prt = '<div class="err-prdt">Veuillez insérer votre image</div>';
   }
 }

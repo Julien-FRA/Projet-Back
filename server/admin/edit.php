@@ -2,6 +2,8 @@
 
 include_once('../../server/config/bdd.php');
 
+$err_prt = '';
+
 if (isset($_GET['id'])) {
     $stmt = $pdo->prepare('SELECT * FROM produits WHERE id_produit=?');
     $stmt->bindParam(1, $_GET['id'], PDO::PARAM_INT);
@@ -57,22 +59,22 @@ if (isset($_POST['submit'])) {
                                     echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
                                 }
                         } else {
-                            echo 'Erreur de traitement du fichier image';
+                            $err_prt = '<div class="err-prdt">Erreur de traitement du fichier image</div>';
                         }
                     } else {
-                        echo 'Vous devez avoir un fichier de type jpg jpeg png ou gif';
+                        $err_prt = '<div class="err-prdt">Vous devez avoir un fichier de type jpg jpeg png ou gif</div>';
                     }
                 } else {
-                    echo 'Veuillez rentrez le prix de votre produit';
+                    $err_prt = '<div class="err-prdt">Veuillez rentrez le prix de votre produit</div>';
                 }
             } else {
-                echo 'Veuillez rentrer la description de votre produit';
+                $err_prt = '<div class="err-prdt">Veuillez rentrer la description de votre produit</div>';
             }
         } else {
-            echo 'Veuillez rentrer le nom de votre produit';
+            $err_prt = '<div class="err-prdt">Veuillez rentrer le nom de votre produit</div>';
         }
     } else {
-        echo 'Veuillez insérer votre image';
+        $err_prt = '<div class="err-prdt">Veuillez insérer votre image</div>';
     }
 }
 
@@ -117,6 +119,7 @@ if (isset($_POST['submit'])) {
                         <input class="input-prix" type="number" min="0" max="1000" value="<?= $row['prix_produit'] ?>" name="prix_produit">
                     </div>
                     <button class="submit-produit" type="submit" name="submit">Ajouter le produit</button>
+                    <?= $err_prt; ?>
                 </form>
             </article>
         </div>

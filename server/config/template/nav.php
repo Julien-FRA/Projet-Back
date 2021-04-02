@@ -14,6 +14,10 @@
             };
             ?>
             <li><a href="addpanier.php">Panier</a></li>
+            <?php if (isset($_SESSION['loggedin'])) {
+                echo '<li><a href="server/logout.php">Déconnexion</a></li>';
+            };
+            ?>
         </ul>
         <div class="burger">
             <div class="line1"></div>

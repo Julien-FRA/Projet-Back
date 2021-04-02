@@ -10,6 +10,7 @@
 $req = $pdo->query('SELECT * FROM produits');
 $client = $pdo->query('SELECT * FROM clients');
 $comm = $pdo->query('SELECT * FROM commentaires');
+$commande = $pdo->query('SELECT * FROM commandes');
 
 ?>
 
@@ -18,10 +19,10 @@ $comm = $pdo->query('SELECT * FROM commentaires');
     <h1>Dashboard administrateur</h1>
     <div class="left-dashboard">
       <ul class="vetical-ul">
-
         <li class="vertical-li"><input type="button" value="Produits" id="produits" class="admin-input"></li>
         <li class="vertical-li"><input type="button" value="Clients" id="clients" class="admin-input"></li>
         <li class="vertical-li"><input type="button" value="Commentaires" id="com" class="admin-input"></li>
+        <li class="vertical-li"><input type="button" value="Commande" id="commande" class="admin-input"></li>
       </ul>
     </div>
 
@@ -43,6 +44,7 @@ $comm = $pdo->query('SELECT * FROM commentaires');
             <input class="input-prix" type="number" min="0" max="1000" value="" name="prix_produit">
           </div>
           <button class="submit-produit" type="submit" name="submit">Ajouter le produit</button>
+          <?= $err_prt; ?>
         </form>
       </article>
 
@@ -177,6 +179,38 @@ $comm = $pdo->query('SELECT * FROM commentaires');
                   <a href="server/admin/delete_com.php?id=<?= $com['id_commentaire']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?')" class="btn-delete">Delete</a>
                 </div>
               </td>
+            </tr>
+            <?php
+            }
+            ?>
+          </tbody>
+
+        </table>
+
+      </article>
+
+      <article class="commande-dashboard" id="divCommande">
+        <h2 class="add-commande">Voici un tableau de récap des commandes</h2>
+        <table>
+
+        <thead>
+            <tr>
+              <th>Id commande</th>
+              <th>Id client</th>
+              <th>Date</th>
+              <th>Prix</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          <?php 
+            while (false !== ($cmd = $commande->fetch(PDO::FETCH_ASSOC))) {
+          ?>
+            <tr>
+              <td><?= $cmd['id_commande']; ?></td>
+              <td><?= $cmd['id_client']; ?></td>
+              <td><?= $cmd['date_commande']; ?></td>
+              <td><?= $cmd['prix_commande']; ?></td>
             </tr>
             <?php
             }
