@@ -1,6 +1,6 @@
 <?php
 
-include_once('../server/config/init.php');
+include_once('config/init.php');
 
 
 if(isset($_GET['id']) && !empty($_GET['id'])) {

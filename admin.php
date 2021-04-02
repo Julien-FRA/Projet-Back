@@ -3,11 +3,13 @@
 <?php include 'server/config/template/nav.php'; ?>
 <?php include 'server/config/admin_check.php'; ?>
 <?php include 'server/admin/add_product.php'; ?>
+<?php include 'server/add_comments.php'; ?>
 
 <?php
 
 $req = $pdo->query('SELECT * FROM produits');
 $client = $pdo->query('SELECT * FROM clients');
+$comm = $pdo->query('SELECT * FROM commentaires');
 
 ?>
 
@@ -153,27 +155,33 @@ $client = $pdo->query('SELECT * FROM clients');
         <h2 class="add-commentaire">Voici un tableau de récap des commentaires</h2>
         <table>
 
-          <thead>
+        <thead>
             <tr>
-              <th>Id</th>
-              <th>Autheur</th>
+              <th>Id clients</th>
+              <th>Id produit</th>
               <th>Commentaire</th>
               <th>Action</th>
             </tr>
           </thead>
 
           <tbody>
+          <?php 
+            while (false !== ($com = $comm->fetch(PDO::FETCH_ASSOC))) {
+          ?>
             <tr>
-              <td>1</td>
-              <td>Julien</td>
-              <td class="td-commentaire">Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire Voici un exemple de commentaire</td>
+              <td><?= $com['id_client']; ?></td>
+              <td><?= $com['id_produit']; ?></td>
+              <td><?= $com['text_commentaire']; ?></td>
               <td>
                 <div class="btn-table">
-                  <a href="" class="btn-edit">Editer</a>
-                  <a href="" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+                  <a href="server/admin/edit_client.php?id=<?= $com['id_client']; ?>" class="btn-edit">Editer</a>
+                  <a href="server/admin/delete_client.php?id=<?= $com['id_client']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
                 </div>
               </td>
             </tr>
+            <?php
+            }
+            ?>
           </tbody>
 
         </table>
