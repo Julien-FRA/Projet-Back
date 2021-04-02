@@ -174,8 +174,7 @@ $comm = $pdo->query('SELECT * FROM commentaires');
               <td><?= $com['text_commentaire']; ?></td>
               <td>
                 <div class="btn-table">
-                  <a href="server/admin/edit_client.php?id=<?= $com['id_client']; ?>" class="btn-edit">Editer</a>
-                  <a href="server/admin/delete_client.php?id=<?= $com['id_client']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+                  <a href="server/admin/delete_com.php?id=<?= $com['id_commentaire']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?')" class="btn-delete">Delete</a>
                 </div>
               </td>
             </tr>
