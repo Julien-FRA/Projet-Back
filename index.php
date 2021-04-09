@@ -7,7 +7,6 @@
 ?>
 
 <main>
-  <!-- <h2 class="">Page Accueil</h2> -->
 
   <section class="section_hero">
     <div class="hero-inner">

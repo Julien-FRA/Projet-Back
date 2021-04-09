@@ -35,6 +35,14 @@ $commande = $pdo->query('SELECT * FROM commandes');
             <label>Image du produit</label>
             <input type="file" class="input-file" name="img_produit">
           </div>
+          <div class="form-img-produit">
+            <label>Image du produit 2</label>
+            <input type="file" class="input-file" name="img_produit2">
+          </div>
+          <div class="form-img-produit">
+            <label>Image du produit 3</label>
+            <input type="file" class="input-file" name="img_produit3">
+          </div>
           <label>Titre du produit</label>
           <input class="input-titre" type="text" name="titre_produit">
           <label>Description du produit</label>

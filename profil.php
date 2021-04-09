@@ -60,11 +60,8 @@ $cmd = $pdo->query('SELECT * FROM commandes WHERE id_client = '.$_SESSION['id'].
       <form class="form-contain" method="post">
         <label for="oldMdp">Ancien mot de passe: </label>
         <input type="text" name="oldMdp" id="oldMdp">
-      <!-- </div>
-      <div class="form-contain"> -->
         <label for="newMdp">Nouveau mot de passe: </label>
         <input type="text" name="newMdp" id="newMdp">
-      <!-- </div> -->
       <div class="submit-wrap">
         <input type="submit" value="Envoyer" class="submit" name="submit-newMdp">
       </div>
@@ -104,7 +101,6 @@ $cmd = $pdo->query('SELECT * FROM commandes WHERE id_client = '.$_SESSION['id'].
 
   </section>
 </main>
-<hr>
 
 <?php include 'server/config/template/footer.php'; ?>
 
