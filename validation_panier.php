@@ -5,10 +5,15 @@ if ($_SESSION['loggedin'] == false) {
   header("Location:login.php");
 } else {
 
+  $panier = $pdo->prepare('SELECT * FROM panier WHERE id_client =?');
+  $panier->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+  $panier->execute();
+  
+  $sommes = $pdo->prepare('SELECT SUM(prix_produit) FROM panier WHERE id_client =?');
+  $sommes->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+  $sommes->execute();
 
-  $panier = $pdo->query('SELECT * FROM panier WHERE id_client = ' . $_SESSION['id'] . '');
 
-  $sommes = $pdo->query('SELECT SUM(prix_produit) FROM panier WHERE id_client = ' . $_SESSION['id'] . '');
   $somm = $sommes->fetch();
   $somm = $somm[0];
   $somm = $somm + 5;

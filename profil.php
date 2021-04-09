@@ -4,7 +4,10 @@
 <?php include 'server/traitement_nvxMdp.php'; ?>
 
 <?php
-$cmd = $pdo->query('SELECT * FROM commandes WHERE id_client = '.$_SESSION['id'].'');
+
+$cmd = $pdo->prepare('SELECT * FROM commandes WHERE id_client =?');
+$cmd->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+$cmd->execute();
 
 ?>
 
