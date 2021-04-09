@@ -7,10 +7,17 @@
 
 <?php
 
-$req = $pdo->query('SELECT * FROM produits');
-$client = $pdo->query('SELECT * FROM clients');
-$comm = $pdo->query('SELECT * FROM commentaires');
-$commande = $pdo->query('SELECT * FROM commandes');
+$req = $pdo->prepare('SELECT * FROM produits');
+$req->execute();
+
+$client = $pdo->prepare('SELECT * FROM clients');
+$client->execute();
+
+$comm = $pdo->prepare('SELECT * FROM commentaires');
+$comm->execute();
+
+$commande = $pdo->prepare('SELECT * FROM commandes');
+$commande->execute();
 
 ?>
 

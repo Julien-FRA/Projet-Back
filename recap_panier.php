@@ -3,7 +3,9 @@
 <?php include 'validation_panier.php'; ?>
 
 <?php
-$cmd = $pdo->query('SELECT * FROM commandes WHERE id_client = ' . $_SESSION['id'] . '');
+$cmd = $pdo->prepare('SELECT * FROM commandes WHERE id_client =?');
+$cmd->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+$cmd->execute();
 ?>
 
 <article class="tableau-produit" id="divProds">

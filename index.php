@@ -3,7 +3,8 @@
 <?php include 'server/config/template/nav.php'; ?>
 
 <?php
-    $prd = $pdo->query('SELECT titre_produit, prix_produit, img_produit, id_produit FROM produits');
+    $prd = $pdo->prepare('SELECT titre_produit, prix_produit, img_produit, id_produit FROM produits');
+    $prd->execute();
 ?>
 
 <main>
