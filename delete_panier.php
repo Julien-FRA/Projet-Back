@@ -2,6 +2,8 @@
 
 include_once('server/config/bdd.php');
 
+//Si un ID est présent dans l'url on lance la requete bdd et on supprime le produit correspondant
+
 if(isset($_GET['id'])) {
     $stmu = $pdo->prepare('SELECT * FROM panier WHERE id_produit=?');
     $stmu->bindParam(1, $_GET['id'], PDO::PARAM_INT);

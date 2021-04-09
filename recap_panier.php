@@ -2,6 +2,8 @@
 <?php include 'server/config/template/nav.php'; ?>
 <?php include 'validation_panier.php'; ?>
 
+<!-- On prépare la requête pour la bdd -->
+
 <?php
 $cmd = $pdo->prepare('SELECT * FROM commandes WHERE id_client =?');
 $cmd->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
@@ -20,6 +22,8 @@ $cmd->execute();
               <th>Prix</th>
             </tr>
           </thead>
+
+          <!-- On remplit notre tableau avec les valeurs de la bdd -->
 
           <tbody>
             <?php 
