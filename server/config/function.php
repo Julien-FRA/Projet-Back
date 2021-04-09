@@ -19,7 +19,6 @@ function addClient($pdo, $name, $email, $cd, $tel, $password, $genre)
     );
 };
 
-
 function checkFlashMessage()
 {
 

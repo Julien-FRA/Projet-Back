@@ -149,6 +149,12 @@ figcaption {
   align-items: center;
 }
 
+.article-pictures {
+  width: 310px;
+  height: 365px;
+  object-fit: cover;
+}
+
 .discover-button {
   width: 123px;
   line-height: 48px;
@@ -180,7 +186,6 @@ figcaption {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 70px;
-  border-top: lightgray 2px solid;
 }
 
 .small_photo_produit {
@@ -189,6 +194,8 @@ figcaption {
 
 .small_photo_produit img {
   width: 75px;
+  height: 75px;
+  object-fit: cover;
 }
 
 .desc_produit {
@@ -653,6 +660,10 @@ figcaption {
 
 .form-produit form label {
   padding: 20px 0 20px 0;
+}
+
+.form-img-produit {
+  padding: 10px 0;
 }
 
 .form-prix-produit {

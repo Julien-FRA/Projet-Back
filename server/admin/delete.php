@@ -13,7 +13,7 @@ if(isset($_GET['id'])) {
     $stmt->bindParam(1, $_GET['id'], PDO::PARAM_INT);
     $stmt->execute();
     echo 'Votre produit à été supprimé';
-    header( "refresh:3;url=../../admin.php");
+    header( "refresh:1;url=../../admin.php");
 }  
 } else {
     http_response_code(404);

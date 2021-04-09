@@ -18,9 +18,9 @@ if (isset($_GET['id'])) {
 }
 if (isset($_POST['send'])) {
     if (isset($_POST['nom_client']) && $_POST['nom_client'] !== '') {
-        $nom_client = $_POST['nom_client'];
-        if(isset($_POST['role_client']) && $_POST['role_client'] !== '') {
-            $role_client = $_POST['role_client'];
+        $nom_client = htmlspecialchars($_POST['nom_client']);
+        if (isset($_POST['role_client']) && $_POST['role_client'] !== '') {
+            $role_client = htmlspecialchars($_POST['role_client']);
             $role_client = intval($role_client);
 
             try {
@@ -35,8 +35,7 @@ if (isset($_POST['send'])) {
 
                 //On renvoie l'utilisateur vers la page liste
                 header("Location:../../admin.php");
-            } 
-            catch (PDOException $e) {
+            } catch (PDOException $e) {
                 echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
             }
         } else {
@@ -66,30 +65,30 @@ if (isset($_POST['send'])) {
 
     <main id="admin">
 
-    <section class="dashboard">
+        <section class="dashboard">
 
-        <h1>Dashboard administrateur</h1>
+            <h1>Dashboard administrateur</h1>
 
-        <div class="produit-dashboard">
+            <div class="produit-dashboard">
 
-            <article class="form-produit">
-                <h2 class="add-produit">Editer un client</h2>
-                <form method="post" enctype='multipart/form-data'>
-                    <label>Nouveau nom du client</label>
-                    <input class="input-titre" type="text" name="nom_client" value="<?= $row['nom_client'] ?>">
-                    <div class="form-prix-produit">
-                        <label>Nouveau role du client</label>
-                        <select name="role_client">
-                            <option value="0" name="role_client">Membre</option>
-                            <option value="1" name="role_client">Admin</option>
-                        </select>
-                    </div>
-                    <button class="submit-produit" type="submit" name="send">Enregistrer</button>
-                    <?= $err_prt; ?>
-                </form>
-            </article>
-        </div>
-    </section>
+                <article class="form-produit">
+                    <h2 class="add-produit">Editer un client</h2>
+                    <form method="post" enctype='multipart/form-data'>
+                        <label>Nouveau nom du client</label>
+                        <input class="input-titre" type="text" name="nom_client" value="<?= $row['nom_client'] ?>">
+                        <div class="form-prix-produit">
+                            <label>Nouveau role du client</label>
+                            <select name="role_client">
+                                <option value="0" name="role_client">Membre</option>
+                                <option value="1" name="role_client">Admin</option>
+                            </select>
+                        </div>
+                        <button class="submit-produit" type="submit" name="send">Enregistrer</button>
+                        <?= $err_prt; ?>
+                    </form>
+                </article>
+            </div>
+        </section>
 
     </main>
 
@@ -118,8 +117,8 @@ if (isset($_POST['send'])) {
         </nav>
     </footer>
 
-
     <script src="asset/script/script.js"></script>
+
 </body>
 
 </html>
