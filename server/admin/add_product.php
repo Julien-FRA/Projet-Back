@@ -8,9 +8,8 @@ if (isset($_POST['submit'])) {
 
   if (!empty($_FILES['img_produit']['name'])) {
 
-
-    $img_produit = $_FILES['img_produit']['name'];    
-    $target_dir = "C:\wamp64\www\Projet-Back\asset\upload\\";//../../asset/upload/\\
+    $img_produit = $_FILES['img_produit']['name'];
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/Projet-Back/asset/upload/';   
     $target_file = $target_dir . basename($_FILES["img_produit"]["name"]);
     // Select file type
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

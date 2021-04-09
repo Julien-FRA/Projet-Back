@@ -16,5 +16,5 @@
         </form>
     </section>
 </main>
-<hr>
+
 <?php include 'server/config/template/footer.php'; ?>

@@ -29,7 +29,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
                 $ins->execute();
 
                 //On renvoie l'utilisateur vers la page liste
-                header("Location:http://localhost/Projet-Back/fiche_produit.php?id=$getid");
+                header("Location:../fiche_produit.php?id=$getid");
               } catch (PDOException $e) {
                 echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
               }

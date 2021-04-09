@@ -448,7 +448,6 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 600px; */
   border: 1px solid #9e9b98;
 }
 
@@ -467,6 +466,10 @@ figcaption {
   height: 30px;
   margin: 10px 0 10px 0;
   border: 1px solid #9e9b98;
+}
+
+.form-contain .submit-wrap input {
+  width: 200px;
 }
 
 .btn-profil:hover {
@@ -532,7 +535,6 @@ figcaption {
 }
 
 .table-info {
-  /* position: absolute; */
   right: 0;
   padding: 30px 30px 30px 0;
   text-align: center;
@@ -779,6 +781,13 @@ figcaption {
 
 .err-prdt {
   background-color: red;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.validate {
+  background-color: green;
   padding: 5px;
   text-align: center;
   margin-top: 10px;
