@@ -13,7 +13,7 @@ if (count($donnees) <= 0) header("Location:index.php");
 <main>
     <section class="info_produit">
         <div class="photo_produit">
-            <img src="asset/upload/<?= $donnees['img_produit']; ?>" alt="photo article virus" class="" />
+            <img src="asset/upload/<?= $donnees['img_produit']; ?>" alt="photo article virus" class="big_photo" />
             <div class="small_photo_produit">
                 <img src="asset/upload/<?= $donnees['img_produit2']; ?>" alt="photo article virus" class="" />
                 <img src="asset/upload/<?= $donnees['img_produit3']; ?>" alt="photo article virus" class="" />

@@ -188,6 +188,12 @@ figcaption {
   padding: 70px;
 }
 
+.big_photo {
+  width: 310px;
+  height: 365px;
+  object-fit: contain;
+}
+
 .small_photo_produit {
   text-align: center;
 }
