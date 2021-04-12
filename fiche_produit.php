@@ -27,9 +27,9 @@ if (count($donnees) <= 0) header("Location:index.php");
         </article>
     </section>
     <section class="more_info">
-        <p class="tittle">Gameover Zeus</p>
-        <p class="text">Gameover Zeus appartient à la famille de programmes malveillants et de virus « Zeus ». Ce programme malveillant est un cheval de Troie, un programme malveillant qui se fait passer pour un programme authentique, qui accède à vos données bancaires sensibles et vous dérobe vos fonds.</p>
-        <p class="text">Le pire avec ce représentant de la famille de programmes malveillants « Zeus », c’est qu’il n’a pas besoin d’un serveur centralisé de « commandement et de contrôle » pour effectuer des opérations bancaires, une faiblesse de nombreuses autres cyberattaques que les autorités peuvent cibler. Gameover Zeus peut contourner les serveurs centralisés et créer des serveurs indépendants pour transmettre des informations sensibles. En substance, vous ne pouvez pas suivre vos données volées.</p>
+        <p class="tittle">Virus informatique</p>
+        <p class="text">Un virus informatique est un automate logiciel autoréplicatif. Certains sont inoffensifs, d'autres contiennent du code malveillant (ce qui entraine le classement du logiciel comme logiciel malveillant). Dans tous les cas, un virus informatique est conçu pour se propager sur d'autres ordinateurs en s'insérant dans des logiciels légitimes, appelés « hôtes » à la manière d'un virus biologique.</p>
+        <p class="text"> Il peut perturber plus ou moins gravement le fonctionnement de l'ordinateur infecté. Un virus se répand par tout moyen d'échange de données numériques, comme les réseaux informatiques ou les périphériques de stockage externes (clés USB, disques durs, etc.). </p>
     </section>
     <section class="ad_comments">
         <p class="tittle">Espace commentaire :</p>

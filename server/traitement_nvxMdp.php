@@ -4,11 +4,16 @@ include_once('config/init.php');
 
 $changMdp ='';
 
+//Si le client à validé le bouton on prepare la requete bdd
+
 if (isset($_POST['submit-newMdp']) && $_POST['submit-newMdp'] == 'Envoyer') {
 
     $cmdp = $pdo->prepare('SELECT password_client FROM clients WHERE id_client = '.$_SESSION['id'].'');
     $cmdp->execute();
     $oldcmdp = $cmdp->fetch();
+
+    //Si le client à bien saisis le bon ancien mot de passe coresspondant et que le nouveau respecte bien les différents caractères,
+    //on lance la requete pour modifier la table clients
 
     if (isset($_POST['oldMdp']) && ($_POST['oldMdp'] !== '') && password_verify($_POST['oldMdp'], $oldcmdp['0'])) {
         $oldMdp = password_hash(htmlspecialchars($_POST['oldMdp']), PASSWORD_DEFAULT);
