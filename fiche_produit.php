@@ -41,7 +41,7 @@ if (count($donnees) <= 0) header("Location:index.php");
         </form>
     </section>
     <section class="section-commentaire">
-        <p class="tittle commentaires">Les commentaire :</p>
+        <p class="tittle commentaires">Les commentaires :</p>
         <?php 
         foreach($cli_comm as $commentaire) {
         ?>

@@ -2,7 +2,6 @@
 
 include_once('config/init.php');
 
-
 if(isset($_GET['id']) && !empty($_GET['id'])) {
 
     $getid = htmlspecialchars($_GET['id']);
@@ -35,9 +34,11 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
               }
             } else {
                 echo 'Veuillez vous connecter';
+                header( "refresh:1;url=../login.php");
             }  
         } else {
             echo 'Veuillez rentrer votre commentaire';
+            header("Location:../fiche_produit.php?id=$getid");
         }
     }
 }

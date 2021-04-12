@@ -59,10 +59,14 @@ if (isset($_POST['envoyer']) && $_POST['envoyer'] == 'Envoyer') {
   }
 
   if (isset($_POST['tel']) && ($_POST['tel'] !== '')) {
-    if ((iconv_strlen($_POST['tel']) == 10)) {
-      $tel = htmlspecialchars($_POST['tel']);
+    if (filter_var($_POST['tel'], FILTER_SANITIZE_NUMBER_INT)) {
+      if ((iconv_strlen($_POST['tel']) == 10)) {
+        $tel = htmlspecialchars($_POST['tel']);
+      } else {
+        $content .= '<div>Le numéro de téléphone doit être de 10 chiffres ! </div>';
+      }
     } else {
-      $content .= '<div>Le numéro de téléphone doit être de 10 chiffres ! </div>';
+      $content .= '<div>Le numéro de téléphone est invalide !</div>';
     }
   } else {
     $content .= '<div>Le numéro de téléphone doit être remplit ! </div>';
