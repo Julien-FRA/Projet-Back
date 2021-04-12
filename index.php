@@ -3,8 +3,8 @@
 <?php include 'server/config/template/nav.php'; ?>
 
 <?php
-    $prd = $pdo->prepare('SELECT titre_produit, prix_produit, img_produit, id_produit FROM produits');
-    $prd->execute();
+$prd = $pdo->prepare('SELECT titre_produit, prix_produit, img_produit, id_produit FROM produits');
+$prd->execute();
 ?>
 
 <main>
@@ -19,23 +19,23 @@
 
   <section class="section_article">
 
-  <?php while ($donn = $prd->fetch()){
-   ?>
-   <figure>
-    <figcaption>
-      <h3><?php echo $donn['titre_produit'];?></h3>
-    </figcaption>
-    <div class="product">
-    <img src="asset/upload/<?= $donn['img_produit']; ?>" alt="photo article virus" class="article-pictures" />
-      <img src="asset/img/star.png" alt="notation produit" />
-      <p class="price">$<?php echo $donn['prix_produit'];?></p>
-      <a href="fiche_produit.php?id=<?php echo $donn['id_produit'];?>" class="discover-button button-fx">DECOUVRIR</a>
-    </div>
-  </figure>
+    <?php while ($donn = $prd->fetch()) {
+    ?>
+      <figure>
+        <figcaption>
+          <h3><?= $donn['titre_produit']; ?></h3>
+        </figcaption>
+        <div class="product">
+          <img src="asset/upload/<?= $donn['img_produit']; ?>" alt="photo article virus" class="article-pictures" />
+          <img src="asset/img/star.png" alt="notation produit" />
+          <p class="price">$<?= $donn['prix_produit']; ?></p>
+          <a href="fiche_produit.php?id=<?= $donn['id_produit']; ?>" class="discover-button button-fx">DECOUVRIR</a>
+        </div>
+      </figure>
 
-<?php
-  }
-?>
+    <?php
+    }
+    ?>
 
   </section>
   <section class="section_hero">

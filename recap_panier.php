@@ -11,38 +11,38 @@ $cmd->execute();
 ?>
 
 <article class="tableau-produit" id="divProds">
-        <h2 class="add-produit">Mes commandes</h2>
-        <table>
+  <h2 class="add-produit">Mes commandes</h2>
+  <table>
 
-          <thead>
-            <tr>
-              <th>Id client</th>
-              <th>Date</th>
-              <th>Type</th>
-              <th>Prix</th>
-            </tr>
-          </thead>
+    <thead>
+      <tr>
+        <th>Id client</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Prix</th>
+      </tr>
+    </thead>
 
-          <!-- On remplit notre tableau avec les valeurs de la bdd -->
+    <!-- On remplit notre tableau avec les valeurs de la bdd -->
 
-          <tbody>
-            <?php 
-            while (false !== ($al = $cmd->fetch(PDO::FETCH_ASSOC))) {
-            ?>
-            <tr>
-              <td><?= $al['id_client']; ?></td>
-              <td><?= $al['date_commande']; ?></td>
-              <td><?= $al['paie_type']; ?></td>
-              <td><?= $al['prix_commande']; ?></td>
-            </tr>
-            <?php
-            }
-            ?>
-          </tbody>
+    <tbody>
+      <?php
+      while (false !== ($al = $cmd->fetch(PDO::FETCH_ASSOC))) {
+      ?>
+        <tr>
+          <td><?= $al['id_client']; ?></td>
+          <td><?= $al['date_commande']; ?></td>
+          <td><?= $al['paie_type']; ?></td>
+          <td><?= $al['prix_commande']; ?></td>
+        </tr>
+      <?php
+      }
+      ?>
+    </tbody>
 
-        </table>
+  </table>
 
-      </article>
+</article>
 
 
- <?php include 'server/config/template/footer.php'; ?> 
+<?php include 'server/config/template/footer.php'; ?>

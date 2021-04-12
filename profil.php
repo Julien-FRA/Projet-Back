@@ -65,9 +65,9 @@ $cmd->execute();
         <input type="text" name="oldMdp" id="oldMdp">
         <label for="newMdp">Nouveau mot de passe: </label>
         <input type="text" name="newMdp" id="newMdp">
-      <div class="submit-wrap">
-        <input type="submit" value="Envoyer" class="submit" name="submit-newMdp">
-      </div>
+        <div class="submit-wrap">
+          <input type="submit" value="Envoyer" class="submit" name="submit-newMdp">
+        </div>
       </form>
     </article>
 
@@ -75,36 +75,34 @@ $cmd->execute();
       <h2 class="profil-title">Mes Commandes</h2>
       <table>
 
-          <thead>
-            <tr>
-              <th>Id client</th>
-              <th>Date</th>
-              <th>Type</th>
-              <th>Prix</th>
-            </tr>
-          </thead>
+        <thead>
+          <tr>
+            <th>Id client</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Prix</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <?php 
-            while (false !== ($al = $cmd->fetch(PDO::FETCH_ASSOC))) {
-            ?>
+        <tbody>
+          <?php
+          while (false !== ($al = $cmd->fetch(PDO::FETCH_ASSOC))) {
+          ?>
             <tr>
               <td><?= $al['id_client']; ?></td>
               <td><?= $al['date_commande']; ?></td>
               <td><?= $al['paie_type']; ?></td>
               <td><?= $al['prix_commande']; ?></td>
             </tr>
-            <?php
-            }
-            ?>
-          </tbody>
+          <?php
+          }
+          ?>
+        </tbody>
 
-        </table>
+      </table>
     </article>
 
   </section>
 </main>
 
 <?php include 'server/config/template/footer.php'; ?>
-
-

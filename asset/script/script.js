@@ -114,7 +114,7 @@ if (document.getElementById("admin")) {
   });
 
   btnCommande.addEventListener("click", () => {
-    if(divCommande.style.display === "none") {
+    if (divCommande.style.display === "none") {
       divCommande.style.display = "block";
       divClients.style.display = "none";
       divProds.style.display = "none";

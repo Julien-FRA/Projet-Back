@@ -2,13 +2,13 @@
 
 include_once('config/init.php');
 
-$changMdp ='';
+$changMdp = '';
 
 //Si le client à validé le bouton on prepare la requete bdd
 
 if (isset($_POST['submit-newMdp']) && $_POST['submit-newMdp'] == 'Envoyer') {
 
-    $cmdp = $pdo->prepare('SELECT password_client FROM clients WHERE id_client = '.$_SESSION['id'].'');
+    $cmdp = $pdo->prepare('SELECT password_client FROM clients WHERE id_client = ' . $_SESSION['id'] . '');
     $cmdp->execute();
     $oldcmdp = $cmdp->fetch();
 
@@ -17,10 +17,10 @@ if (isset($_POST['submit-newMdp']) && $_POST['submit-newMdp'] == 'Envoyer') {
 
     if (isset($_POST['oldMdp']) && ($_POST['oldMdp'] !== '') && password_verify($_POST['oldMdp'], $oldcmdp['0'])) {
         $oldMdp = password_hash(htmlspecialchars($_POST['oldMdp']), PASSWORD_DEFAULT);
-        if(isset($_POST['newMdp']) && ($_POST['newMdp']) !== '') {
+        if (isset($_POST['newMdp']) && ($_POST['newMdp']) !== '') {
             if (preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[%!?*]).{10,20}$/', $_POST['newMdp'])) {
                 $newMdp = password_hash(htmlspecialchars($_POST['newMdp']), PASSWORD_DEFAULT);
-                
+
                 try {
 
                     //On insère les données reçues
@@ -35,14 +35,14 @@ if (isset($_POST['submit-newMdp']) && $_POST['submit-newMdp'] == 'Envoyer') {
                     // header( "refresh:1;url=../profil.php");
                 } catch (PDOException $e) {
                     echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-                }                   
+                }
             } else {
-                $changMdp = '<div class="err-prdt">Le mot de passe est invalide</div>';                
+                $changMdp = '<div class="err-prdt">Le mot de passe est invalide</div>';
             }
         } else {
-            $changMdp = '<div class="err-prdt">Veuillez rentrer votre nouveau mot de passe</div>';           
+            $changMdp = '<div class="err-prdt">Veuillez rentrer votre nouveau mot de passe</div>';
         }
     } else {
-        $changMdp = '<div class="err-prdt">Veuillez rentrer votre ancien mot de passe</div>'; 
+        $changMdp = '<div class="err-prdt">Veuillez rentrer votre ancien mot de passe</div>';
     }
 }

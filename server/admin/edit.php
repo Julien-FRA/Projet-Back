@@ -47,28 +47,28 @@ if (isset($_POST['submit'])) {
                             $uniq_file_name2 = str_replace(' ', '_', uniqid() . '_' . basename($_FILES["img_produit2"]["name"]));
                             $uniq_file_name3 = str_replace(' ', '_', uniqid() . '_' . basename($_FILES["img_produit3"]["name"]));
                             if (rename($target_dir . basename($_FILES["img_produit"]["name"]), $target_dir . $uniq_file_name))
-                                if (rename($target_dir . basename($_FILES["img_produit2"]["name"]), $target_dir . $uniq_file_name2)) 
+                                if (rename($target_dir . basename($_FILES["img_produit2"]["name"]), $target_dir . $uniq_file_name2))
                                     if (rename($target_dir . basename($_FILES["img_produit3"]["name"]), $target_dir . $uniq_file_name3))
 
-                                try {
+                                        try {
 
-                                    //On insère les données reçues
-                                    $sth = $pdo->prepare("
+                                            //On insère les données reçues
+                                            $sth = $pdo->prepare("
                           UPDATE produits SET img_produit=:img_produit, img_produit2=:img_produit2, img_produit3=:img_produit3,titre_produit=:titre_produit, desc_produit=:desc_produit, prix_produit=:prix_produit WHERE id_produit=:id;");
-                                    $sth->bindParam(':img_produit', $uniq_file_name);
-                                    $sth->bindParam(':img_produit2', $uniq_file_name2);
-                                    $sth->bindParam(':img_produit3', $uniq_file_name3);
-                                    $sth->bindParam(':titre_produit', $titre_produit);
-                                    $sth->bindParam(':desc_produit', $desc_produit);
-                                    $sth->bindParam(':prix_produit', $prix_produit);
-                                    $sth->bindParam(':id', $_GET['id']);
-                                    $sth->execute();
+                                            $sth->bindParam(':img_produit', $uniq_file_name);
+                                            $sth->bindParam(':img_produit2', $uniq_file_name2);
+                                            $sth->bindParam(':img_produit3', $uniq_file_name3);
+                                            $sth->bindParam(':titre_produit', $titre_produit);
+                                            $sth->bindParam(':desc_produit', $desc_produit);
+                                            $sth->bindParam(':prix_produit', $prix_produit);
+                                            $sth->bindParam(':id', $_GET['id']);
+                                            $sth->execute();
 
-                                    //On renvoie l'utilisateur vers la page liste
-                                    header("Location:../../admin.php");
-                                } catch (PDOException $e) {
-                                    echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
-                                }
+                                            //On renvoie l'utilisateur vers la page liste
+                                            header("Location:../../admin.php");
+                                        } catch (PDOException $e) {
+                                            echo 'Impossible de traiter les données. Erreur : ' . $e->getMessage();
+                                        }
                         } else {
                             $err_prt = '<div class="err-prdt">Erreur de traitement du fichier image</div>';
                         }

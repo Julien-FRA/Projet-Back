@@ -55,8 +55,8 @@ function redirectRole()
 
 function selectProduit($id_produit, $pdo): array
 {
-    if(!is_int($id_produit)){
-return [];
+    if (!is_int($id_produit)) {
+        return [];
     }
 
     $result = $pdo->prepare('SELECT * FROM produits WHERE id_produit = ?');
@@ -64,13 +64,13 @@ return [];
     $result->execute([$id_produit]);
 
     $produit = $result->fetch();
-return $produit;
+    return $produit;
 };
 
 function selectCommentaireClients($id_produit, $pdo): array
 {
-    if(!is_int($id_produit)){
-return [];
+    if (!is_int($id_produit)) {
+        return [];
     }
 
     $clt = $pdo->prepare('SELECT * FROM commentaires INNER JOIN clients ON commentaires.id_client = clients.id_client WHERE id_produit = ? ORDER BY date_commentaire ASC');
@@ -78,7 +78,7 @@ return [];
     $clt->execute([$id_produit]);
 
     $client = $clt->fetchAll();
-return $client;
+    return $client;
 };
 
 function addPanier($pdo, $test, $idprod, $prix, $img, $titre)

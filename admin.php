@@ -107,21 +107,21 @@ $commande->execute();
           </thead>
 
           <tbody>
-            <?php 
+            <?php
             while (false !== ($all = $req->fetch(PDO::FETCH_ASSOC))) {
             ?>
-            <tr>
-              <td><?= $all['id_produit']; ?></td>
-              <td class="table-img"><img src="asset/upload/<?= $all['img_produit']; ?>" alt=""></td>
-              <td><?= $all['titre_produit']; ?></td>
-              <td><?= $all['prix_produit']; ?></td>
-              <td>
-                <div class="btn-table">
-                  <a href="server/admin/edit.php?id=<?= $all['id_produit']; ?>" class="btn-edit">Editer</a>
-                  <a href="server/admin/delete.php?id=<?= $all['id_produit']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
-                </div>
-              </td>
-            </tr>
+              <tr>
+                <td><?= $all['id_produit']; ?></td>
+                <td class="table-img"><img src="asset/upload/<?= $all['img_produit']; ?>" alt=""></td>
+                <td><?= $all['titre_produit']; ?></td>
+                <td><?= $all['prix_produit']; ?></td>
+                <td>
+                  <div class="btn-table">
+                    <a href="server/admin/edit.php?id=<?= $all['id_produit']; ?>" class="btn-edit">Editer</a>
+                    <a href="server/admin/delete.php?id=<?= $all['id_produit']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+                  </div>
+                </td>
+              </tr>
             <?php
             }
             ?>
@@ -145,20 +145,20 @@ $commande->execute();
           </thead>
 
           <tbody>
-          <?php 
+            <?php
             while (false !== ($inf = $client->fetch(PDO::FETCH_ASSOC))) {
-          ?>
-            <tr>
-              <td><?= $inf['id_client']; ?></td>
-              <td><?= $inf['nom_client']; ?></td>
-              <td><?= $inf['role_client']; ?></td>
-              <td>
-                <div class="btn-table">
-                  <a href="server/admin/edit_client.php?id=<?= $inf['id_client']; ?>" class="btn-edit">Editer</a>
-                  <a href="server/admin/delete_client.php?id=<?= $inf['id_client']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
-                </div>
-              </td>
-            </tr>
+            ?>
+              <tr>
+                <td><?= $inf['id_client']; ?></td>
+                <td><?= $inf['nom_client']; ?></td>
+                <td><?= $inf['role_client']; ?></td>
+                <td>
+                  <div class="btn-table">
+                    <a href="server/admin/edit_client.php?id=<?= $inf['id_client']; ?>" class="btn-edit">Editer</a>
+                    <a href="server/admin/delete_client.php?id=<?= $inf['id_client']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')" class="btn-delete">Delete</a>
+                  </div>
+                </td>
+              </tr>
             <?php
             }
             ?>
@@ -172,7 +172,7 @@ $commande->execute();
         <h2 class="add-commentaire">Voici un tableau de récap des commentaires</h2>
         <table>
 
-        <thead>
+          <thead>
             <tr>
               <th>Id clients</th>
               <th>Id produit</th>
@@ -182,19 +182,19 @@ $commande->execute();
           </thead>
 
           <tbody>
-          <?php 
+            <?php
             while (false !== ($com = $comm->fetch(PDO::FETCH_ASSOC))) {
-          ?>
-            <tr>
-              <td><?= $com['id_client']; ?></td>
-              <td><?= $com['id_produit']; ?></td>
-              <td><?= $com['text_commentaire']; ?></td>
-              <td>
-                <div class="btn-table">
-                  <a href="server/admin/delete_com.php?id=<?= $com['id_commentaire']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?')" class="btn-delete">Delete</a>
-                </div>
-              </td>
-            </tr>
+            ?>
+              <tr>
+                <td><?= $com['id_client']; ?></td>
+                <td><?= $com['id_produit']; ?></td>
+                <td><?= $com['text_commentaire']; ?></td>
+                <td>
+                  <div class="btn-table">
+                    <a href="server/admin/delete_com.php?id=<?= $com['id_commentaire']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?')" class="btn-delete">Delete</a>
+                  </div>
+                </td>
+              </tr>
             <?php
             }
             ?>
@@ -208,7 +208,7 @@ $commande->execute();
         <h2 class="add-commande">Voici un tableau de récap des commandes</h2>
         <table>
 
-        <thead>
+          <thead>
             <tr>
               <th>Id commande</th>
               <th>Id client</th>
@@ -218,15 +218,15 @@ $commande->execute();
           </thead>
 
           <tbody>
-          <?php 
+            <?php
             while (false !== ($cmd = $commande->fetch(PDO::FETCH_ASSOC))) {
-          ?>
-            <tr>
-              <td><?= $cmd['id_commande']; ?></td>
-              <td><?= $cmd['id_client']; ?></td>
-              <td><?= $cmd['date_commande']; ?></td>
-              <td><?= $cmd['prix_commande']; ?></td>
-            </tr>
+            ?>
+              <tr>
+                <td><?= $cmd['id_commande']; ?></td>
+                <td><?= $cmd['id_client']; ?></td>
+                <td><?= $cmd['date_commande']; ?></td>
+                <td><?= $cmd['prix_commande']; ?></td>
+              </tr>
             <?php
             }
             ?>
