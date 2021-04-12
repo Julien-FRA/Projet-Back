@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         $img_produit = $_FILES['img_produit']['name'];
         $img_produit2 = $_FILES['img_produit2']['name'];
         $img_produit3 = $_FILES['img_produit3']['name'];
-        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/Projet-Back/asset/upload/';
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/asset/upload/';
         $target_file = $target_dir . basename($_FILES["img_produit"]["name"]);
         $target_file2 = $target_dir . basename($_FILES["img_produit2"]["name"]);
         $target_file3 = $target_dir . basename($_FILES["img_produit3"]["name"]);
