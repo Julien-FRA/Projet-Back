@@ -11,7 +11,6 @@ $cmd->execute();
 ?>
 
 <article class="tableau-produit" id="divProds">
-<<<<<<< HEAD
         <h2 class="add-produit">Mes commandes</h2>
         <table>
 
@@ -47,37 +46,3 @@ $cmd->execute();
 
 
  <?php include 'server/config/template/footer.php'; ?> 
-=======
-  <h2 class="add-produit">Mes commandes</h2>
-  <table>
-
-    <thead>
-      <tr>
-        <th>Id client</th>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Prix</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <?php
-      while (false !== ($al = $cmd->fetch(PDO::FETCH_ASSOC))) {
-      ?>
-        <tr>
-          <td><?= $al['id_client']; ?></td>
-          <td><?= $al['date_commande']; ?></td>
-          <td><?= $al['paie_type']; ?></td>
-          <td><?= $al['prix_commande']; ?></td>
-        </tr>
-      <?php
-      }
-      ?>
-    </tbody>
-
-  </table>
-
-</article>
-
-<?php include 'server/config/template/footer.php'; ?>
->>>>>>> e8151a381108a035536f9497fd0e1a84a71fec96

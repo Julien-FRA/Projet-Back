@@ -29,7 +29,7 @@ $commande->execute();
         <li class="vertical-li"><input type="button" value="Produits" id="produits" class="admin-input"></li>
         <li class="vertical-li"><input type="button" value="Clients" id="clients" class="admin-input"></li>
         <li class="vertical-li"><input type="button" value="Commentaires" id="com" class="admin-input"></li>
-        <li class="vertical-li"><input type="button" value="Commande" id="commande" class="admin-input"></li>
+        <li class="vertical-li"><input type="button" value="Commandes" id="commande" class="admin-input"></li>
       </ul>
     </div>
 
@@ -63,31 +63,31 @@ $commande->execute();
         </form>
       </article>
 
-      <article class="nb-vues">
+      <article class="recap-site">
         <h2 class="add-produit">Activité</h2>
 
         <?php
-        $nb_visites = file_get_contents('data/pagesvues.txt');
-        $nb_visites++;
-        file_put_contents('data/pagesvues.txt', $nb_visites);
-        echo 'Nombre de pages vues : <strong>' . $nb_visites . '</strong><br/>';
+        $nb_prod = $pdo->prepare('SELECT COUNT(*) FROM produits');
+        $nb_prod->execute();
+        $nb_prods = $nb_prod->fetch();
 
-        $f_records = fopen('data/records.txt', 'r+');
-        $dernierRecord = fgets($f_records);
-        $dernierRecord = explode(' ', $dernierRecord);
-        echo 'Record du nombre de pages vues : <strong>';
+        $nb_client = $pdo->prepare('SELECT COUNT(*) FROM clients');
+        $nb_client->execute();
+        $nb_clients = $nb_client->fetch();
 
-        if ($nb_visites > $dernierRecord[0]) {
-          rewind($f_records);
-          $ligne = $nb_visites . ' ' . date('d/m/Y');
-          fwrite($f_records, $ligne);
-          echo $nb_visites . '</strong> établi le <strong>' . date('d/m/Y');
-        } else {
-          echo $dernierRecord[0] . '</strong> établi le <strong>' . $dernierRecord[1];
-        }
+        $nb_comd = $pdo->prepare('SELECT COUNT(*) FROM commandes');
+        $nb_comd->execute();
+        $nb_comds = $nb_comd->fetch();
 
-        echo '</strong><br/>';
-        fclose($f_records);
+        $prix_comd = $pdo->prepare('SELECT SUM(prix_commande) FROM commandes');
+        $prix_comd->execute();
+        $prix_comds = $prix_comd->fetch();
+
+
+        echo '<p>Nombre de produits : <strong>' . $nb_prods[0] . '</strong></p>';
+        echo '<p>Nombre de clients : <strong>' . $nb_clients[0] . '</strong></p>';
+        echo '<p>Nombre de commandes : <strong>' . $nb_comds[0] . '</strong></p>';
+        echo '<p>Revenu des commandes : <strong>$' . $prix_comds[0] . '</strong></p>';
         ?>
 
       </article>

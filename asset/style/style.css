@@ -319,14 +319,10 @@ figcaption {
 
 .sign {
   padding: 30px 0 30px 0;
-  margin: 80px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.in {
-  margin: 150px;
 }
 
 .signup {
@@ -780,14 +776,19 @@ figcaption {
 }
 
 .client-dashboard,
-.commentaire-dashboard {
+.commentaire-dashboard,
+.commande-dashboard {
   display: none;
 }
 
-.nb-vues {
+.recap-site {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 20px 0 0 20px;
+}
+
+.recap-site p {
+  padding-top: 10px;
 }
 
 .err-prdt {
